@@ -13,7 +13,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "xempts"
+NAME = "xepmts"
 VERSION = "0.2"
 # To install the library, run the following
 #

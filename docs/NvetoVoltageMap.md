@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | 
 **experiment** | **str** |  | [default to 'xenonnt']
 **detector** | **str** |  | [default to 'nveto']
+**active** | **bool** |  | [optional] [default to True]
 **voltages** | [**list[TpcVoltageMapVoltages]**](TpcVoltageMapVoltages.md) |  | [optional] 
 **created_by** | **str** |  | [optional] 
 **comments** | **str** |  | [optional] 

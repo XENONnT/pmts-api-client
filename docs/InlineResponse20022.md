@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[MuvetoDarkCountRate]**](MuvetoDarkCountRate.md) |  | [optional] 
+**items** | [**list[NvetoInstall]**](NvetoInstall.md) |  | [optional] 
 **meta** | [**ResponeMetadata**](ResponeMetadata.md) |  | [optional] 
 **links** | [**ResponeLinks**](ResponeLinks.md) |  | [optional] 
 

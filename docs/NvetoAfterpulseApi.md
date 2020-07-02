@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nveto_afterpulses**
-> InlineResponse20017 get_nveto_afterpulses(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20019 get_nveto_afterpulses(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more NvetoAfterpulses
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 

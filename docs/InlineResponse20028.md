@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[MuvetoAfterpulse]**](MuvetoAfterpulse.md) |  | [optional] 
+**items** | [**list[MuvetoGain]**](MuvetoGain.md) |  | [optional] 
 **meta** | [**ResponeMetadata**](ResponeMetadata.md) |  | [optional] 
 **links** | [**ResponeLinks**](ResponeLinks.md) |  | [optional] 
 

@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_voltage_maps**
-> InlineResponse20029 get_muveto_voltage_maps(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20032 get_muveto_voltage_maps(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoVoltageMaps
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[NvetoGain]**](NvetoGain.md) |  | [optional] 
+**items** | [**list[NvetoPmtError]**](NvetoPmtError.md) |  | [optional] 
 **meta** | [**ResponeMetadata**](ResponeMetadata.md) |  | [optional] 
 **links** | [**ResponeLinks**](ResponeLinks.md) |  | [optional] 
 

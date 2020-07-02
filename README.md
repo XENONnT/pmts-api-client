@@ -64,15 +64,15 @@ configuration.host = "https://api.pmts.xenonnt.org/v1"
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = xepmts.MuvetoAfterpulseApi(api_client)
-    muvetoafterpulse_id = 'muvetoafterpulse_id_example' # str | 
+    api_instance = xepmts.AccountApi(api_client)
+    account_id = 'account_id_example' # str | 
 if_match = 'if_match_example' # str | Current value of the _etag field (optional)
 
     try:
-        # Deletes a MuvetoAfterpulse document
-        api_instance.delete_muveto_afterpulse_item(muvetoafterpulse_id, if_match=if_match)
+        # Deletes a Account document
+        api_instance.delete_account_item(account_id, if_match=if_match)
     except ApiException as e:
-        print("Exception when calling MuvetoAfterpulseApi->delete_muveto_afterpulse_item: %s\n" % e)
+        print("Exception when calling AccountApi->delete_account_item: %s\n" % e)
     
 ```
 
@@ -82,53 +82,118 @@ All URIs are relative to *https://api.pmts.xenonnt.org/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountApi* | [**delete_account_item**](docs/AccountApi.md#delete_account_item) | **DELETE** /accounts/{accountId} | Deletes a Account document
+*AccountApi* | [**get_account_item**](docs/AccountApi.md#get_account_item) | **GET** /accounts/{accountId} | Retrieves a Account document
+*AccountApi* | [**get_account_item_by_username**](docs/AccountApi.md#get_account_item_by_username) | **GET** /accounts/{Username} | Retrieves a Account document by username
+*AccountApi* | [**get_accounts**](docs/AccountApi.md#get_accounts) | **GET** /accounts | Retrieves one or more Accounts
+*AccountApi* | [**post_accounts**](docs/AccountApi.md#post_accounts) | **POST** /accounts | Stores one or more Accounts.
+*AccountApi* | [**put_account_item**](docs/AccountApi.md#put_account_item) | **PUT** /accounts/{accountId} | Replaces a Account document
+*MuvetoAccountApi* | [**delete_muveto_account_item**](docs/MuvetoAccountApi.md#delete_muveto_account_item) | **DELETE** /muveto/accounts/{muvetoaccountId} | Deletes a MuvetoAccount document
+*MuvetoAccountApi* | [**get_muveto_account_item**](docs/MuvetoAccountApi.md#get_muveto_account_item) | **GET** /muveto/accounts/{muvetoaccountId} | Retrieves a MuvetoAccount document
+*MuvetoAccountApi* | [**get_muveto_account_item_by_username**](docs/MuvetoAccountApi.md#get_muveto_account_item_by_username) | **GET** /muveto/accounts/{Username} | Retrieves a MuvetoAccount document by username
+*MuvetoAccountApi* | [**get_muveto_accounts**](docs/MuvetoAccountApi.md#get_muveto_accounts) | **GET** /muveto/accounts | Retrieves one or more MuvetoAccounts
+*MuvetoAccountApi* | [**post_muveto_accounts**](docs/MuvetoAccountApi.md#post_muveto_accounts) | **POST** /muveto/accounts | Stores one or more MuvetoAccounts.
+*MuvetoAccountApi* | [**put_muveto_account_item**](docs/MuvetoAccountApi.md#put_muveto_account_item) | **PUT** /muveto/accounts/{muvetoaccountId} | Replaces a MuvetoAccount document
+*MuvetoAccount1TApi* | [**delete_muveto_account1_t_item**](docs/MuvetoAccount1TApi.md#delete_muveto_account1_t_item) | **DELETE** /xenon1t/muveto/accounts/{muvetoaccount1tId} | Deletes a MuvetoAccount1T document
+*MuvetoAccount1TApi* | [**get_muveto_account1_t_item**](docs/MuvetoAccount1TApi.md#get_muveto_account1_t_item) | **GET** /xenon1t/muveto/accounts/{muvetoaccount1tId} | Retrieves a MuvetoAccount1T document
+*MuvetoAccount1TApi* | [**get_muveto_account1_t_item_by_username**](docs/MuvetoAccount1TApi.md#get_muveto_account1_t_item_by_username) | **GET** /xenon1t/muveto/accounts/{Username} | Retrieves a MuvetoAccount1T document by username
+*MuvetoAccount1TApi* | [**get_muveto_accounts1_t**](docs/MuvetoAccount1TApi.md#get_muveto_accounts1_t) | **GET** /xenon1t/muveto/accounts | Retrieves one or more MuvetoAccounts1T
+*MuvetoAccount1TApi* | [**post_muveto_accounts1_t**](docs/MuvetoAccount1TApi.md#post_muveto_accounts1_t) | **POST** /xenon1t/muveto/accounts | Stores one or more MuvetoAccounts1T.
+*MuvetoAccount1TApi* | [**put_muveto_account1_t_item**](docs/MuvetoAccount1TApi.md#put_muveto_account1_t_item) | **PUT** /xenon1t/muveto/accounts/{muvetoaccount1tId} | Replaces a MuvetoAccount1T document
 *MuvetoAfterpulseApi* | [**delete_muveto_afterpulse_item**](docs/MuvetoAfterpulseApi.md#delete_muveto_afterpulse_item) | **DELETE** /muveto/afterpules/{muvetoafterpulseId} | Deletes a MuvetoAfterpulse document
 *MuvetoAfterpulseApi* | [**get_muveto_afterpulse_item**](docs/MuvetoAfterpulseApi.md#get_muveto_afterpulse_item) | **GET** /muveto/afterpules/{muvetoafterpulseId} | Retrieves a MuvetoAfterpulse document
 *MuvetoAfterpulseApi* | [**get_muveto_afterpulses**](docs/MuvetoAfterpulseApi.md#get_muveto_afterpulses) | **GET** /muveto/afterpules | Retrieves one or more MuvetoAfterpulses
 *MuvetoAfterpulseApi* | [**post_muveto_afterpulses**](docs/MuvetoAfterpulseApi.md#post_muveto_afterpulses) | **POST** /muveto/afterpules | Stores one or more MuvetoAfterpulses.
 *MuvetoAfterpulseApi* | [**put_muveto_afterpulse_item**](docs/MuvetoAfterpulseApi.md#put_muveto_afterpulse_item) | **PUT** /muveto/afterpules/{muvetoafterpulseId} | Replaces a MuvetoAfterpulse document
+*MuvetoAfterpulse1TApi* | [**delete_muveto_afterpulse1_t_item**](docs/MuvetoAfterpulse1TApi.md#delete_muveto_afterpulse1_t_item) | **DELETE** /xenon1t/muveto/afterpules/{muvetoafterpulse1tId} | Deletes a MuvetoAfterpulse1T document
+*MuvetoAfterpulse1TApi* | [**get_muveto_afterpulse1_t_item**](docs/MuvetoAfterpulse1TApi.md#get_muveto_afterpulse1_t_item) | **GET** /xenon1t/muveto/afterpules/{muvetoafterpulse1tId} | Retrieves a MuvetoAfterpulse1T document
+*MuvetoAfterpulse1TApi* | [**get_muveto_afterpulses1_t**](docs/MuvetoAfterpulse1TApi.md#get_muveto_afterpulses1_t) | **GET** /xenon1t/muveto/afterpules | Retrieves one or more MuvetoAfterpulses1T
+*MuvetoAfterpulse1TApi* | [**post_muveto_afterpulses1_t**](docs/MuvetoAfterpulse1TApi.md#post_muveto_afterpulses1_t) | **POST** /xenon1t/muveto/afterpules | Stores one or more MuvetoAfterpulses1T.
+*MuvetoAfterpulse1TApi* | [**put_muveto_afterpulse1_t_item**](docs/MuvetoAfterpulse1TApi.md#put_muveto_afterpulse1_t_item) | **PUT** /xenon1t/muveto/afterpules/{muvetoafterpulse1tId} | Replaces a MuvetoAfterpulse1T document
 *MuvetoCurrentChangeApi* | [**delete_muveto_current_change_item**](docs/MuvetoCurrentChangeApi.md#delete_muveto_current_change_item) | **DELETE** /muveto/current_changes/{muvetocurrentchangeId} | Deletes a MuvetoCurrentChange document
 *MuvetoCurrentChangeApi* | [**get_muveto_current_change_item**](docs/MuvetoCurrentChangeApi.md#get_muveto_current_change_item) | **GET** /muveto/current_changes/{muvetocurrentchangeId} | Retrieves a MuvetoCurrentChange document
 *MuvetoCurrentChangeApi* | [**get_muveto_current_changes**](docs/MuvetoCurrentChangeApi.md#get_muveto_current_changes) | **GET** /muveto/current_changes | Retrieves one or more MuvetoCurrentChanges
 *MuvetoCurrentChangeApi* | [**post_muveto_current_changes**](docs/MuvetoCurrentChangeApi.md#post_muveto_current_changes) | **POST** /muveto/current_changes | Stores one or more MuvetoCurrentChanges.
 *MuvetoCurrentChangeApi* | [**put_muveto_current_change_item**](docs/MuvetoCurrentChangeApi.md#put_muveto_current_change_item) | **PUT** /muveto/current_changes/{muvetocurrentchangeId} | Replaces a MuvetoCurrentChange document
+*MuvetoCurrentChange1TApi* | [**delete_muveto_current_change1_t_item**](docs/MuvetoCurrentChange1TApi.md#delete_muveto_current_change1_t_item) | **DELETE** /xenon1t/muveto/current_changes/{muvetocurrentchange1tId} | Deletes a MuvetoCurrentChange1T document
+*MuvetoCurrentChange1TApi* | [**get_muveto_current_change1_t_item**](docs/MuvetoCurrentChange1TApi.md#get_muveto_current_change1_t_item) | **GET** /xenon1t/muveto/current_changes/{muvetocurrentchange1tId} | Retrieves a MuvetoCurrentChange1T document
+*MuvetoCurrentChange1TApi* | [**get_muveto_current_changes1_t**](docs/MuvetoCurrentChange1TApi.md#get_muveto_current_changes1_t) | **GET** /xenon1t/muveto/current_changes | Retrieves one or more MuvetoCurrentChanges1T
+*MuvetoCurrentChange1TApi* | [**post_muveto_current_changes1_t**](docs/MuvetoCurrentChange1TApi.md#post_muveto_current_changes1_t) | **POST** /xenon1t/muveto/current_changes | Stores one or more MuvetoCurrentChanges1T.
+*MuvetoCurrentChange1TApi* | [**put_muveto_current_change1_t_item**](docs/MuvetoCurrentChange1TApi.md#put_muveto_current_change1_t_item) | **PUT** /xenon1t/muveto/current_changes/{muvetocurrentchange1tId} | Replaces a MuvetoCurrentChange1T document
 *MuvetoDarkCountRateApi* | [**delete_muveto_dark_count_rate_item**](docs/MuvetoDarkCountRateApi.md#delete_muveto_dark_count_rate_item) | **DELETE** /muveto/dark_counts_rates/{muvetodarkcountrateId} | Deletes a MuvetoDarkCountRate document
 *MuvetoDarkCountRateApi* | [**get_muveto_dark_count_rate_item**](docs/MuvetoDarkCountRateApi.md#get_muveto_dark_count_rate_item) | **GET** /muveto/dark_counts_rates/{muvetodarkcountrateId} | Retrieves a MuvetoDarkCountRate document
 *MuvetoDarkCountRateApi* | [**get_muveto_dark_count_rates**](docs/MuvetoDarkCountRateApi.md#get_muveto_dark_count_rates) | **GET** /muveto/dark_counts_rates | Retrieves one or more MuvetoDarkCountRates
 *MuvetoDarkCountRateApi* | [**post_muveto_dark_count_rates**](docs/MuvetoDarkCountRateApi.md#post_muveto_dark_count_rates) | **POST** /muveto/dark_counts_rates | Stores one or more MuvetoDarkCountRates.
 *MuvetoDarkCountRateApi* | [**put_muveto_dark_count_rate_item**](docs/MuvetoDarkCountRateApi.md#put_muveto_dark_count_rate_item) | **PUT** /muveto/dark_counts_rates/{muvetodarkcountrateId} | Replaces a MuvetoDarkCountRate document
+*MuvetoDarkCountRate1TApi* | [**delete_muveto_dark_count_rate1_t_item**](docs/MuvetoDarkCountRate1TApi.md#delete_muveto_dark_count_rate1_t_item) | **DELETE** /xenon1t/muveto/dark_counts_rates/{muvetodarkcountrate1tId} | Deletes a MuvetoDarkCountRate1T document
+*MuvetoDarkCountRate1TApi* | [**get_muveto_dark_count_rate1_t_item**](docs/MuvetoDarkCountRate1TApi.md#get_muveto_dark_count_rate1_t_item) | **GET** /xenon1t/muveto/dark_counts_rates/{muvetodarkcountrate1tId} | Retrieves a MuvetoDarkCountRate1T document
+*MuvetoDarkCountRate1TApi* | [**get_muveto_dark_count_rates1_t**](docs/MuvetoDarkCountRate1TApi.md#get_muveto_dark_count_rates1_t) | **GET** /xenon1t/muveto/dark_counts_rates | Retrieves one or more MuvetoDarkCountRates1T
+*MuvetoDarkCountRate1TApi* | [**post_muveto_dark_count_rates1_t**](docs/MuvetoDarkCountRate1TApi.md#post_muveto_dark_count_rates1_t) | **POST** /xenon1t/muveto/dark_counts_rates | Stores one or more MuvetoDarkCountRates1T.
+*MuvetoDarkCountRate1TApi* | [**put_muveto_dark_count_rate1_t_item**](docs/MuvetoDarkCountRate1TApi.md#put_muveto_dark_count_rate1_t_item) | **PUT** /xenon1t/muveto/dark_counts_rates/{muvetodarkcountrate1tId} | Replaces a MuvetoDarkCountRate1T document
 *MuvetoGainApi* | [**delete_muveto_gain_item**](docs/MuvetoGainApi.md#delete_muveto_gain_item) | **DELETE** /muveto/gains/{muvetogainId} | Deletes a MuvetoGain document
 *MuvetoGainApi* | [**get_muveto_gain_item**](docs/MuvetoGainApi.md#get_muveto_gain_item) | **GET** /muveto/gains/{muvetogainId} | Retrieves a MuvetoGain document
 *MuvetoGainApi* | [**get_muveto_gains**](docs/MuvetoGainApi.md#get_muveto_gains) | **GET** /muveto/gains | Retrieves one or more MuvetoGains
 *MuvetoGainApi* | [**post_muveto_gains**](docs/MuvetoGainApi.md#post_muveto_gains) | **POST** /muveto/gains | Stores one or more MuvetoGains.
 *MuvetoGainApi* | [**put_muveto_gain_item**](docs/MuvetoGainApi.md#put_muveto_gain_item) | **PUT** /muveto/gains/{muvetogainId} | Replaces a MuvetoGain document
+*MuvetoGain1TApi* | [**delete_muveto_gain1_t_item**](docs/MuvetoGain1TApi.md#delete_muveto_gain1_t_item) | **DELETE** /xenon1t/muveto/gains/{muvetogain1tId} | Deletes a MuvetoGain1T document
+*MuvetoGain1TApi* | [**get_muveto_gain1_t_item**](docs/MuvetoGain1TApi.md#get_muveto_gain1_t_item) | **GET** /xenon1t/muveto/gains/{muvetogain1tId} | Retrieves a MuvetoGain1T document
+*MuvetoGain1TApi* | [**get_muveto_gains1_t**](docs/MuvetoGain1TApi.md#get_muveto_gains1_t) | **GET** /xenon1t/muveto/gains | Retrieves one or more MuvetoGains1T
+*MuvetoGain1TApi* | [**post_muveto_gains1_t**](docs/MuvetoGain1TApi.md#post_muveto_gains1_t) | **POST** /xenon1t/muveto/gains | Stores one or more MuvetoGains1T.
+*MuvetoGain1TApi* | [**put_muveto_gain1_t_item**](docs/MuvetoGain1TApi.md#put_muveto_gain1_t_item) | **PUT** /xenon1t/muveto/gains/{muvetogain1tId} | Replaces a MuvetoGain1T document
 *MuvetoGainMeasurementApi* | [**delete_muveto_gain_measurement_item**](docs/MuvetoGainMeasurementApi.md#delete_muveto_gain_measurement_item) | **DELETE** /muveto/gain_measurements/{muvetogainmeasurementId} | Deletes a MuvetoGainMeasurement document
 *MuvetoGainMeasurementApi* | [**get_muveto_gain_measurement_item**](docs/MuvetoGainMeasurementApi.md#get_muveto_gain_measurement_item) | **GET** /muveto/gain_measurements/{muvetogainmeasurementId} | Retrieves a MuvetoGainMeasurement document
 *MuvetoGainMeasurementApi* | [**get_muveto_gain_measurements**](docs/MuvetoGainMeasurementApi.md#get_muveto_gain_measurements) | **GET** /muveto/gain_measurements | Retrieves one or more MuvetoGainMeasurements
 *MuvetoGainMeasurementApi* | [**post_muveto_gain_measurements**](docs/MuvetoGainMeasurementApi.md#post_muveto_gain_measurements) | **POST** /muveto/gain_measurements | Stores one or more MuvetoGainMeasurements.
 *MuvetoGainMeasurementApi* | [**put_muveto_gain_measurement_item**](docs/MuvetoGainMeasurementApi.md#put_muveto_gain_measurement_item) | **PUT** /muveto/gain_measurements/{muvetogainmeasurementId} | Replaces a MuvetoGainMeasurement document
+*MuvetoGainMeasurement1TApi* | [**delete_muveto_gain_measurement1_t_item**](docs/MuvetoGainMeasurement1TApi.md#delete_muveto_gain_measurement1_t_item) | **DELETE** /xenon1t/muveto/gain_measurements/{muvetogainmeasurement1tId} | Deletes a MuvetoGainMeasurement1T document
+*MuvetoGainMeasurement1TApi* | [**get_muveto_gain_measurement1_t_item**](docs/MuvetoGainMeasurement1TApi.md#get_muveto_gain_measurement1_t_item) | **GET** /xenon1t/muveto/gain_measurements/{muvetogainmeasurement1tId} | Retrieves a MuvetoGainMeasurement1T document
+*MuvetoGainMeasurement1TApi* | [**get_muveto_gain_measurements1_t**](docs/MuvetoGainMeasurement1TApi.md#get_muveto_gain_measurements1_t) | **GET** /xenon1t/muveto/gain_measurements | Retrieves one or more MuvetoGainMeasurements1T
+*MuvetoGainMeasurement1TApi* | [**post_muveto_gain_measurements1_t**](docs/MuvetoGainMeasurement1TApi.md#post_muveto_gain_measurements1_t) | **POST** /xenon1t/muveto/gain_measurements | Stores one or more MuvetoGainMeasurements1T.
+*MuvetoGainMeasurement1TApi* | [**put_muveto_gain_measurement1_t_item**](docs/MuvetoGainMeasurement1TApi.md#put_muveto_gain_measurement1_t_item) | **PUT** /xenon1t/muveto/gain_measurements/{muvetogainmeasurement1tId} | Replaces a MuvetoGainMeasurement1T document
 *MuvetoInstallApi* | [**delete_muveto_install_item**](docs/MuvetoInstallApi.md#delete_muveto_install_item) | **DELETE** /muveto/installs/{muvetoinstallId} | Deletes a MuvetoInstall document
 *MuvetoInstallApi* | [**get_muveto_install_item**](docs/MuvetoInstallApi.md#get_muveto_install_item) | **GET** /muveto/installs/{muvetoinstallId} | Retrieves a MuvetoInstall document
 *MuvetoInstallApi* | [**get_muveto_install_item_by_uid**](docs/MuvetoInstallApi.md#get_muveto_install_item_by_uid) | **GET** /muveto/installs/{Uid} | Retrieves a MuvetoInstall document by uid
 *MuvetoInstallApi* | [**get_muveto_installs**](docs/MuvetoInstallApi.md#get_muveto_installs) | **GET** /muveto/installs | Retrieves one or more MuvetoInstalls
 *MuvetoInstallApi* | [**post_muveto_installs**](docs/MuvetoInstallApi.md#post_muveto_installs) | **POST** /muveto/installs | Stores one or more MuvetoInstalls.
 *MuvetoInstallApi* | [**put_muveto_install_item**](docs/MuvetoInstallApi.md#put_muveto_install_item) | **PUT** /muveto/installs/{muvetoinstallId} | Replaces a MuvetoInstall document
+*MuvetoInstall1TApi* | [**delete_muveto_install1_t_item**](docs/MuvetoInstall1TApi.md#delete_muveto_install1_t_item) | **DELETE** /xenon1t/muveto/installs/{muvetoinstall1tId} | Deletes a MuvetoInstall1T document
+*MuvetoInstall1TApi* | [**get_muveto_install1_t_item**](docs/MuvetoInstall1TApi.md#get_muveto_install1_t_item) | **GET** /xenon1t/muveto/installs/{muvetoinstall1tId} | Retrieves a MuvetoInstall1T document
+*MuvetoInstall1TApi* | [**get_muveto_install1_t_item_by_uid**](docs/MuvetoInstall1TApi.md#get_muveto_install1_t_item_by_uid) | **GET** /xenon1t/muveto/installs/{Uid} | Retrieves a MuvetoInstall1T document by uid
+*MuvetoInstall1TApi* | [**get_muveto_installs1_t**](docs/MuvetoInstall1TApi.md#get_muveto_installs1_t) | **GET** /xenon1t/muveto/installs | Retrieves one or more MuvetoInstalls1T
+*MuvetoInstall1TApi* | [**post_muveto_installs1_t**](docs/MuvetoInstall1TApi.md#post_muveto_installs1_t) | **POST** /xenon1t/muveto/installs | Stores one or more MuvetoInstalls1T.
+*MuvetoInstall1TApi* | [**put_muveto_install1_t_item**](docs/MuvetoInstall1TApi.md#put_muveto_install1_t_item) | **PUT** /xenon1t/muveto/installs/{muvetoinstall1tId} | Replaces a MuvetoInstall1T document
 *MuvetoPmtApi* | [**delete_muveto_pmt_item**](docs/MuvetoPmtApi.md#delete_muveto_pmt_item) | **DELETE** /muveto/pmts/{muvetopmtId} | Deletes a MuvetoPmt document
 *MuvetoPmtApi* | [**get_muveto_pmt_item**](docs/MuvetoPmtApi.md#get_muveto_pmt_item) | **GET** /muveto/pmts/{muvetopmtId} | Retrieves a MuvetoPmt document
 *MuvetoPmtApi* | [**get_muveto_pmt_item_by_serial_number**](docs/MuvetoPmtApi.md#get_muveto_pmt_item_by_serial_number) | **GET** /muveto/pmts/{Serial_Number} | Retrieves a MuvetoPmt document by serial_number
 *MuvetoPmtApi* | [**get_muveto_pmts**](docs/MuvetoPmtApi.md#get_muveto_pmts) | **GET** /muveto/pmts | Retrieves one or more MuvetoPmts
 *MuvetoPmtApi* | [**post_muveto_pmts**](docs/MuvetoPmtApi.md#post_muveto_pmts) | **POST** /muveto/pmts | Stores one or more MuvetoPmts.
 *MuvetoPmtApi* | [**put_muveto_pmt_item**](docs/MuvetoPmtApi.md#put_muveto_pmt_item) | **PUT** /muveto/pmts/{muvetopmtId} | Replaces a MuvetoPmt document
+*MuvetoPmt1TApi* | [**delete_muveto_pmt1_t_item**](docs/MuvetoPmt1TApi.md#delete_muveto_pmt1_t_item) | **DELETE** /xenon1t/muveto/pmts/{muvetopmt1tId} | Deletes a MuvetoPmt1T document
+*MuvetoPmt1TApi* | [**get_muveto_pmt1_t_item**](docs/MuvetoPmt1TApi.md#get_muveto_pmt1_t_item) | **GET** /xenon1t/muveto/pmts/{muvetopmt1tId} | Retrieves a MuvetoPmt1T document
+*MuvetoPmt1TApi* | [**get_muveto_pmt1_t_item_by_serial_number**](docs/MuvetoPmt1TApi.md#get_muveto_pmt1_t_item_by_serial_number) | **GET** /xenon1t/muveto/pmts/{Serial_Number} | Retrieves a MuvetoPmt1T document by serial_number
+*MuvetoPmt1TApi* | [**get_muveto_pmts1_t**](docs/MuvetoPmt1TApi.md#get_muveto_pmts1_t) | **GET** /xenon1t/muveto/pmts | Retrieves one or more MuvetoPmts1T
+*MuvetoPmt1TApi* | [**post_muveto_pmts1_t**](docs/MuvetoPmt1TApi.md#post_muveto_pmts1_t) | **POST** /xenon1t/muveto/pmts | Stores one or more MuvetoPmts1T.
+*MuvetoPmt1TApi* | [**put_muveto_pmt1_t_item**](docs/MuvetoPmt1TApi.md#put_muveto_pmt1_t_item) | **PUT** /xenon1t/muveto/pmts/{muvetopmt1tId} | Replaces a MuvetoPmt1T document
 *MuvetoPmtErrorApi* | [**delete_muveto_pmt_error_item**](docs/MuvetoPmtErrorApi.md#delete_muveto_pmt_error_item) | **DELETE** /muveto/pmt_errors/{muvetopmterrorId} | Deletes a MuvetoPmtError document
 *MuvetoPmtErrorApi* | [**get_muveto_pmt_error_item**](docs/MuvetoPmtErrorApi.md#get_muveto_pmt_error_item) | **GET** /muveto/pmt_errors/{muvetopmterrorId} | Retrieves a MuvetoPmtError document
 *MuvetoPmtErrorApi* | [**get_muveto_pmt_errors**](docs/MuvetoPmtErrorApi.md#get_muveto_pmt_errors) | **GET** /muveto/pmt_errors | Retrieves one or more MuvetoPmtErrors
 *MuvetoPmtErrorApi* | [**post_muveto_pmt_errors**](docs/MuvetoPmtErrorApi.md#post_muveto_pmt_errors) | **POST** /muveto/pmt_errors | Stores one or more MuvetoPmtErrors.
 *MuvetoPmtErrorApi* | [**put_muveto_pmt_error_item**](docs/MuvetoPmtErrorApi.md#put_muveto_pmt_error_item) | **PUT** /muveto/pmt_errors/{muvetopmterrorId} | Replaces a MuvetoPmtError document
+*MuvetoPmtError1TApi* | [**delete_muveto_pmt_error1_t_item**](docs/MuvetoPmtError1TApi.md#delete_muveto_pmt_error1_t_item) | **DELETE** /xenon1t/muveto/pmt_errors/{muvetopmterror1tId} | Deletes a MuvetoPmtError1T document
+*MuvetoPmtError1TApi* | [**get_muveto_pmt_error1_t_item**](docs/MuvetoPmtError1TApi.md#get_muveto_pmt_error1_t_item) | **GET** /xenon1t/muveto/pmt_errors/{muvetopmterror1tId} | Retrieves a MuvetoPmtError1T document
+*MuvetoPmtError1TApi* | [**get_muveto_pmt_errors1_t**](docs/MuvetoPmtError1TApi.md#get_muveto_pmt_errors1_t) | **GET** /xenon1t/muveto/pmt_errors | Retrieves one or more MuvetoPmtErrors1T
+*MuvetoPmtError1TApi* | [**post_muveto_pmt_errors1_t**](docs/MuvetoPmtError1TApi.md#post_muveto_pmt_errors1_t) | **POST** /xenon1t/muveto/pmt_errors | Stores one or more MuvetoPmtErrors1T.
+*MuvetoPmtError1TApi* | [**put_muveto_pmt_error1_t_item**](docs/MuvetoPmtError1TApi.md#put_muveto_pmt_error1_t_item) | **PUT** /xenon1t/muveto/pmt_errors/{muvetopmterror1tId} | Replaces a MuvetoPmtError1T document
 *MuvetoVoltageChangeApi* | [**delete_muveto_voltage_change_item**](docs/MuvetoVoltageChangeApi.md#delete_muveto_voltage_change_item) | **DELETE** /muveto/voltage_changes/{muvetovoltagechangeId} | Deletes a MuvetoVoltageChange document
 *MuvetoVoltageChangeApi* | [**get_muveto_voltage_change_item**](docs/MuvetoVoltageChangeApi.md#get_muveto_voltage_change_item) | **GET** /muveto/voltage_changes/{muvetovoltagechangeId} | Retrieves a MuvetoVoltageChange document
 *MuvetoVoltageChangeApi* | [**get_muveto_voltage_changes**](docs/MuvetoVoltageChangeApi.md#get_muveto_voltage_changes) | **GET** /muveto/voltage_changes | Retrieves one or more MuvetoVoltageChanges
 *MuvetoVoltageChangeApi* | [**post_muveto_voltage_changes**](docs/MuvetoVoltageChangeApi.md#post_muveto_voltage_changes) | **POST** /muveto/voltage_changes | Stores one or more MuvetoVoltageChanges.
 *MuvetoVoltageChangeApi* | [**put_muveto_voltage_change_item**](docs/MuvetoVoltageChangeApi.md#put_muveto_voltage_change_item) | **PUT** /muveto/voltage_changes/{muvetovoltagechangeId} | Replaces a MuvetoVoltageChange document
+*MuvetoVoltageChange1TApi* | [**delete_muveto_voltage_change1_t_item**](docs/MuvetoVoltageChange1TApi.md#delete_muveto_voltage_change1_t_item) | **DELETE** /xenon1t/muveto/voltage_changes/{muvetovoltagechange1tId} | Deletes a MuvetoVoltageChange1T document
+*MuvetoVoltageChange1TApi* | [**get_muveto_voltage_change1_t_item**](docs/MuvetoVoltageChange1TApi.md#get_muveto_voltage_change1_t_item) | **GET** /xenon1t/muveto/voltage_changes/{muvetovoltagechange1tId} | Retrieves a MuvetoVoltageChange1T document
+*MuvetoVoltageChange1TApi* | [**get_muveto_voltage_changes1_t**](docs/MuvetoVoltageChange1TApi.md#get_muveto_voltage_changes1_t) | **GET** /xenon1t/muveto/voltage_changes | Retrieves one or more MuvetoVoltageChanges1T
+*MuvetoVoltageChange1TApi* | [**post_muveto_voltage_changes1_t**](docs/MuvetoVoltageChange1TApi.md#post_muveto_voltage_changes1_t) | **POST** /xenon1t/muveto/voltage_changes | Stores one or more MuvetoVoltageChanges1T.
+*MuvetoVoltageChange1TApi* | [**put_muveto_voltage_change1_t_item**](docs/MuvetoVoltageChange1TApi.md#put_muveto_voltage_change1_t_item) | **PUT** /xenon1t/muveto/voltage_changes/{muvetovoltagechange1tId} | Replaces a MuvetoVoltageChange1T document
 *MuvetoVoltageMapApi* | [**delete_muveto_voltage_map_item**](docs/MuvetoVoltageMapApi.md#delete_muveto_voltage_map_item) | **DELETE** /muveto/voltage_maps/{muvetovoltagemapId} | Deletes a MuvetoVoltageMap document
 *MuvetoVoltageMapApi* | [**delete_muveto_voltage_maps**](docs/MuvetoVoltageMapApi.md#delete_muveto_voltage_maps) | **DELETE** /muveto/voltage_maps | Deletes all MuvetoVoltageMaps
 *MuvetoVoltageMapApi* | [**get_muveto_voltage_map_item**](docs/MuvetoVoltageMapApi.md#get_muveto_voltage_map_item) | **GET** /muveto/voltage_maps/{muvetovoltagemapId} | Retrieves a MuvetoVoltageMap document
@@ -136,7 +201,21 @@ Class | Method | HTTP request | Description
 *MuvetoVoltageMapApi* | [**get_muveto_voltage_maps**](docs/MuvetoVoltageMapApi.md#get_muveto_voltage_maps) | **GET** /muveto/voltage_maps | Retrieves one or more MuvetoVoltageMaps
 *MuvetoVoltageMapApi* | [**post_muveto_voltage_maps**](docs/MuvetoVoltageMapApi.md#post_muveto_voltage_maps) | **POST** /muveto/voltage_maps | Stores one or more MuvetoVoltageMaps.
 *MuvetoVoltageMapApi* | [**put_muveto_voltage_map_item**](docs/MuvetoVoltageMapApi.md#put_muveto_voltage_map_item) | **PUT** /muveto/voltage_maps/{muvetovoltagemapId} | Replaces a MuvetoVoltageMap document
+*MuvetoVoltageMap1TApi* | [**delete_muveto_voltage_map1_t_item**](docs/MuvetoVoltageMap1TApi.md#delete_muveto_voltage_map1_t_item) | **DELETE** /xenon1t/muveto/voltage_maps/{muvetovoltagemap1tId} | Deletes a MuvetoVoltageMap1T document
+*MuvetoVoltageMap1TApi* | [**delete_muveto_voltage_maps1_t**](docs/MuvetoVoltageMap1TApi.md#delete_muveto_voltage_maps1_t) | **DELETE** /xenon1t/muveto/voltage_maps | Deletes all MuvetoVoltageMaps1T
+*MuvetoVoltageMap1TApi* | [**get_muveto_voltage_map1_t_item**](docs/MuvetoVoltageMap1TApi.md#get_muveto_voltage_map1_t_item) | **GET** /xenon1t/muveto/voltage_maps/{muvetovoltagemap1tId} | Retrieves a MuvetoVoltageMap1T document
+*MuvetoVoltageMap1TApi* | [**get_muveto_voltage_map1_t_item_by_name**](docs/MuvetoVoltageMap1TApi.md#get_muveto_voltage_map1_t_item_by_name) | **GET** /xenon1t/muveto/voltage_maps/{Name} | Retrieves a MuvetoVoltageMap1T document by name
+*MuvetoVoltageMap1TApi* | [**get_muveto_voltage_maps1_t**](docs/MuvetoVoltageMap1TApi.md#get_muveto_voltage_maps1_t) | **GET** /xenon1t/muveto/voltage_maps | Retrieves one or more MuvetoVoltageMaps1T
+*MuvetoVoltageMap1TApi* | [**post_muveto_voltage_maps1_t**](docs/MuvetoVoltageMap1TApi.md#post_muveto_voltage_maps1_t) | **POST** /xenon1t/muveto/voltage_maps | Stores one or more MuvetoVoltageMaps1T.
+*MuvetoVoltageMap1TApi* | [**put_muveto_voltage_map1_t_item**](docs/MuvetoVoltageMap1TApi.md#put_muveto_voltage_map1_t_item) | **PUT** /xenon1t/muveto/voltage_maps/{muvetovoltagemap1tId} | Replaces a MuvetoVoltageMap1T document
 *MuvetoVoltageMapNameApi* | [**get_muveto_voltage_map_names**](docs/MuvetoVoltageMapNameApi.md#get_muveto_voltage_map_names) | **GET** /muveto/voltage_maps/names | Retrieves one or more MuvetoVoltageMapNames
+*MuvetoVoltageMapName1TApi* | [**get_muveto_voltage_map_names1_t**](docs/MuvetoVoltageMapName1TApi.md#get_muveto_voltage_map_names1_t) | **GET** /xenon1t/muveto/voltage_maps/names | Retrieves one or more MuvetoVoltageMapNames1T
+*NvetoAccountApi* | [**delete_nveto_account_item**](docs/NvetoAccountApi.md#delete_nveto_account_item) | **DELETE** /nveto/accounts/{nvetoaccountId} | Deletes a NvetoAccount document
+*NvetoAccountApi* | [**get_nveto_account_item**](docs/NvetoAccountApi.md#get_nveto_account_item) | **GET** /nveto/accounts/{nvetoaccountId} | Retrieves a NvetoAccount document
+*NvetoAccountApi* | [**get_nveto_account_item_by_username**](docs/NvetoAccountApi.md#get_nveto_account_item_by_username) | **GET** /nveto/accounts/{Username} | Retrieves a NvetoAccount document by username
+*NvetoAccountApi* | [**get_nveto_accounts**](docs/NvetoAccountApi.md#get_nveto_accounts) | **GET** /nveto/accounts | Retrieves one or more NvetoAccounts
+*NvetoAccountApi* | [**post_nveto_accounts**](docs/NvetoAccountApi.md#post_nveto_accounts) | **POST** /nveto/accounts | Stores one or more NvetoAccounts.
+*NvetoAccountApi* | [**put_nveto_account_item**](docs/NvetoAccountApi.md#put_nveto_account_item) | **PUT** /nveto/accounts/{nvetoaccountId} | Replaces a NvetoAccount document
 *NvetoAfterpulseApi* | [**delete_nveto_afterpulse_item**](docs/NvetoAfterpulseApi.md#delete_nveto_afterpulse_item) | **DELETE** /nveto/afterpules/{nvetoafterpulseId} | Deletes a NvetoAfterpulse document
 *NvetoAfterpulseApi* | [**get_nveto_afterpulse_item**](docs/NvetoAfterpulseApi.md#get_nveto_afterpulse_item) | **GET** /nveto/afterpules/{nvetoafterpulseId} | Retrieves a NvetoAfterpulse document
 *NvetoAfterpulseApi* | [**get_nveto_afterpulses**](docs/NvetoAfterpulseApi.md#get_nveto_afterpulses) | **GET** /nveto/afterpules | Retrieves one or more NvetoAfterpulses
@@ -192,53 +271,112 @@ Class | Method | HTTP request | Description
 *NvetoVoltageMapApi* | [**post_nveto_voltage_maps**](docs/NvetoVoltageMapApi.md#post_nveto_voltage_maps) | **POST** /nveto/voltage_maps | Stores one or more NvetoVoltageMaps.
 *NvetoVoltageMapApi* | [**put_nveto_voltage_map_item**](docs/NvetoVoltageMapApi.md#put_nveto_voltage_map_item) | **PUT** /nveto/voltage_maps/{nvetovoltagemapId} | Replaces a NvetoVoltageMap document
 *NvetoVoltageMapNameApi* | [**get_nveto_voltage_map_names**](docs/NvetoVoltageMapNameApi.md#get_nveto_voltage_map_names) | **GET** /nveto/voltage_maps/names | Retrieves one or more NvetoVoltageMapNames
+*TpcAccountApi* | [**delete_tpc_account_item**](docs/TpcAccountApi.md#delete_tpc_account_item) | **DELETE** /tpc/accounts/{tpcaccountId} | Deletes a TpcAccount document
+*TpcAccountApi* | [**get_tpc_account_item**](docs/TpcAccountApi.md#get_tpc_account_item) | **GET** /tpc/accounts/{tpcaccountId} | Retrieves a TpcAccount document
+*TpcAccountApi* | [**get_tpc_account_item_by_username**](docs/TpcAccountApi.md#get_tpc_account_item_by_username) | **GET** /tpc/accounts/{Username} | Retrieves a TpcAccount document by username
+*TpcAccountApi* | [**get_tpc_accounts**](docs/TpcAccountApi.md#get_tpc_accounts) | **GET** /tpc/accounts | Retrieves one or more TpcAccounts
+*TpcAccountApi* | [**post_tpc_accounts**](docs/TpcAccountApi.md#post_tpc_accounts) | **POST** /tpc/accounts | Stores one or more TpcAccounts.
+*TpcAccountApi* | [**put_tpc_account_item**](docs/TpcAccountApi.md#put_tpc_account_item) | **PUT** /tpc/accounts/{tpcaccountId} | Replaces a TpcAccount document
+*TpcAccount1TApi* | [**delete_tpc_account1_t_item**](docs/TpcAccount1TApi.md#delete_tpc_account1_t_item) | **DELETE** /xenon1t/tpc/accounts/{tpcaccount1tId} | Deletes a TpcAccount1T document
+*TpcAccount1TApi* | [**get_tpc_account1_t_item**](docs/TpcAccount1TApi.md#get_tpc_account1_t_item) | **GET** /xenon1t/tpc/accounts/{tpcaccount1tId} | Retrieves a TpcAccount1T document
+*TpcAccount1TApi* | [**get_tpc_account1_t_item_by_username**](docs/TpcAccount1TApi.md#get_tpc_account1_t_item_by_username) | **GET** /xenon1t/tpc/accounts/{Username} | Retrieves a TpcAccount1T document by username
+*TpcAccount1TApi* | [**get_tpc_accounts1_t**](docs/TpcAccount1TApi.md#get_tpc_accounts1_t) | **GET** /xenon1t/tpc/accounts | Retrieves one or more TpcAccounts1T
+*TpcAccount1TApi* | [**post_tpc_accounts1_t**](docs/TpcAccount1TApi.md#post_tpc_accounts1_t) | **POST** /xenon1t/tpc/accounts | Stores one or more TpcAccounts1T.
+*TpcAccount1TApi* | [**put_tpc_account1_t_item**](docs/TpcAccount1TApi.md#put_tpc_account1_t_item) | **PUT** /xenon1t/tpc/accounts/{tpcaccount1tId} | Replaces a TpcAccount1T document
 *TpcAfterpulseApi* | [**delete_tpc_afterpulse_item**](docs/TpcAfterpulseApi.md#delete_tpc_afterpulse_item) | **DELETE** /tpc/afterpules/{tpcafterpulseId} | Deletes a TpcAfterpulse document
 *TpcAfterpulseApi* | [**get_tpc_afterpulse_item**](docs/TpcAfterpulseApi.md#get_tpc_afterpulse_item) | **GET** /tpc/afterpules/{tpcafterpulseId} | Retrieves a TpcAfterpulse document
 *TpcAfterpulseApi* | [**get_tpc_afterpulses**](docs/TpcAfterpulseApi.md#get_tpc_afterpulses) | **GET** /tpc/afterpules | Retrieves one or more TpcAfterpulses
 *TpcAfterpulseApi* | [**post_tpc_afterpulses**](docs/TpcAfterpulseApi.md#post_tpc_afterpulses) | **POST** /tpc/afterpules | Stores one or more TpcAfterpulses.
 *TpcAfterpulseApi* | [**put_tpc_afterpulse_item**](docs/TpcAfterpulseApi.md#put_tpc_afterpulse_item) | **PUT** /tpc/afterpules/{tpcafterpulseId} | Replaces a TpcAfterpulse document
+*TpcAfterpulse1TApi* | [**delete_tpc_afterpulse1_t_item**](docs/TpcAfterpulse1TApi.md#delete_tpc_afterpulse1_t_item) | **DELETE** /xenon1t/tpc/afterpules/{tpcafterpulse1tId} | Deletes a TpcAfterpulse1T document
+*TpcAfterpulse1TApi* | [**get_tpc_afterpulse1_t_item**](docs/TpcAfterpulse1TApi.md#get_tpc_afterpulse1_t_item) | **GET** /xenon1t/tpc/afterpules/{tpcafterpulse1tId} | Retrieves a TpcAfterpulse1T document
+*TpcAfterpulse1TApi* | [**get_tpc_afterpulses1_t**](docs/TpcAfterpulse1TApi.md#get_tpc_afterpulses1_t) | **GET** /xenon1t/tpc/afterpules | Retrieves one or more TpcAfterpulses1T
+*TpcAfterpulse1TApi* | [**post_tpc_afterpulses1_t**](docs/TpcAfterpulse1TApi.md#post_tpc_afterpulses1_t) | **POST** /xenon1t/tpc/afterpules | Stores one or more TpcAfterpulses1T.
+*TpcAfterpulse1TApi* | [**put_tpc_afterpulse1_t_item**](docs/TpcAfterpulse1TApi.md#put_tpc_afterpulse1_t_item) | **PUT** /xenon1t/tpc/afterpules/{tpcafterpulse1tId} | Replaces a TpcAfterpulse1T document
 *TpcCurrentChangeApi* | [**delete_tpc_current_change_item**](docs/TpcCurrentChangeApi.md#delete_tpc_current_change_item) | **DELETE** /tpc/current_changes/{tpccurrentchangeId} | Deletes a TpcCurrentChange document
 *TpcCurrentChangeApi* | [**get_tpc_current_change_item**](docs/TpcCurrentChangeApi.md#get_tpc_current_change_item) | **GET** /tpc/current_changes/{tpccurrentchangeId} | Retrieves a TpcCurrentChange document
 *TpcCurrentChangeApi* | [**get_tpc_current_changes**](docs/TpcCurrentChangeApi.md#get_tpc_current_changes) | **GET** /tpc/current_changes | Retrieves one or more TpcCurrentChanges
 *TpcCurrentChangeApi* | [**post_tpc_current_changes**](docs/TpcCurrentChangeApi.md#post_tpc_current_changes) | **POST** /tpc/current_changes | Stores one or more TpcCurrentChanges.
 *TpcCurrentChangeApi* | [**put_tpc_current_change_item**](docs/TpcCurrentChangeApi.md#put_tpc_current_change_item) | **PUT** /tpc/current_changes/{tpccurrentchangeId} | Replaces a TpcCurrentChange document
+*TpcCurrentChange1TApi* | [**delete_tpc_current_change1_t_item**](docs/TpcCurrentChange1TApi.md#delete_tpc_current_change1_t_item) | **DELETE** /xenon1t/tpc/current_changes/{tpccurrentchange1tId} | Deletes a TpcCurrentChange1T document
+*TpcCurrentChange1TApi* | [**get_tpc_current_change1_t_item**](docs/TpcCurrentChange1TApi.md#get_tpc_current_change1_t_item) | **GET** /xenon1t/tpc/current_changes/{tpccurrentchange1tId} | Retrieves a TpcCurrentChange1T document
+*TpcCurrentChange1TApi* | [**get_tpc_current_changes1_t**](docs/TpcCurrentChange1TApi.md#get_tpc_current_changes1_t) | **GET** /xenon1t/tpc/current_changes | Retrieves one or more TpcCurrentChanges1T
+*TpcCurrentChange1TApi* | [**post_tpc_current_changes1_t**](docs/TpcCurrentChange1TApi.md#post_tpc_current_changes1_t) | **POST** /xenon1t/tpc/current_changes | Stores one or more TpcCurrentChanges1T.
+*TpcCurrentChange1TApi* | [**put_tpc_current_change1_t_item**](docs/TpcCurrentChange1TApi.md#put_tpc_current_change1_t_item) | **PUT** /xenon1t/tpc/current_changes/{tpccurrentchange1tId} | Replaces a TpcCurrentChange1T document
 *TpcDarkCountRateApi* | [**delete_tpc_dark_count_rate_item**](docs/TpcDarkCountRateApi.md#delete_tpc_dark_count_rate_item) | **DELETE** /tpc/dark_counts_rates/{tpcdarkcountrateId} | Deletes a TpcDarkCountRate document
 *TpcDarkCountRateApi* | [**get_tpc_dark_count_rate_item**](docs/TpcDarkCountRateApi.md#get_tpc_dark_count_rate_item) | **GET** /tpc/dark_counts_rates/{tpcdarkcountrateId} | Retrieves a TpcDarkCountRate document
 *TpcDarkCountRateApi* | [**get_tpc_dark_count_rates**](docs/TpcDarkCountRateApi.md#get_tpc_dark_count_rates) | **GET** /tpc/dark_counts_rates | Retrieves one or more TpcDarkCountRates
 *TpcDarkCountRateApi* | [**post_tpc_dark_count_rates**](docs/TpcDarkCountRateApi.md#post_tpc_dark_count_rates) | **POST** /tpc/dark_counts_rates | Stores one or more TpcDarkCountRates.
 *TpcDarkCountRateApi* | [**put_tpc_dark_count_rate_item**](docs/TpcDarkCountRateApi.md#put_tpc_dark_count_rate_item) | **PUT** /tpc/dark_counts_rates/{tpcdarkcountrateId} | Replaces a TpcDarkCountRate document
+*TpcDarkCountRate1TApi* | [**delete_tpc_dark_count_rate1_t_item**](docs/TpcDarkCountRate1TApi.md#delete_tpc_dark_count_rate1_t_item) | **DELETE** /xenon1t/tpc/dark_counts_rates/{tpcdarkcountrate1tId} | Deletes a TpcDarkCountRate1T document
+*TpcDarkCountRate1TApi* | [**get_tpc_dark_count_rate1_t_item**](docs/TpcDarkCountRate1TApi.md#get_tpc_dark_count_rate1_t_item) | **GET** /xenon1t/tpc/dark_counts_rates/{tpcdarkcountrate1tId} | Retrieves a TpcDarkCountRate1T document
+*TpcDarkCountRate1TApi* | [**get_tpc_dark_count_rates1_t**](docs/TpcDarkCountRate1TApi.md#get_tpc_dark_count_rates1_t) | **GET** /xenon1t/tpc/dark_counts_rates | Retrieves one or more TpcDarkCountRates1T
+*TpcDarkCountRate1TApi* | [**post_tpc_dark_count_rates1_t**](docs/TpcDarkCountRate1TApi.md#post_tpc_dark_count_rates1_t) | **POST** /xenon1t/tpc/dark_counts_rates | Stores one or more TpcDarkCountRates1T.
+*TpcDarkCountRate1TApi* | [**put_tpc_dark_count_rate1_t_item**](docs/TpcDarkCountRate1TApi.md#put_tpc_dark_count_rate1_t_item) | **PUT** /xenon1t/tpc/dark_counts_rates/{tpcdarkcountrate1tId} | Replaces a TpcDarkCountRate1T document
 *TpcGainApi* | [**delete_tpc_gain_item**](docs/TpcGainApi.md#delete_tpc_gain_item) | **DELETE** /tpc/gains/{tpcgainId} | Deletes a TpcGain document
 *TpcGainApi* | [**get_tpc_gain_item**](docs/TpcGainApi.md#get_tpc_gain_item) | **GET** /tpc/gains/{tpcgainId} | Retrieves a TpcGain document
 *TpcGainApi* | [**get_tpc_gains**](docs/TpcGainApi.md#get_tpc_gains) | **GET** /tpc/gains | Retrieves one or more TpcGains
 *TpcGainApi* | [**post_tpc_gains**](docs/TpcGainApi.md#post_tpc_gains) | **POST** /tpc/gains | Stores one or more TpcGains.
 *TpcGainApi* | [**put_tpc_gain_item**](docs/TpcGainApi.md#put_tpc_gain_item) | **PUT** /tpc/gains/{tpcgainId} | Replaces a TpcGain document
+*TpcGain1TApi* | [**delete_tpc_gain1_t_item**](docs/TpcGain1TApi.md#delete_tpc_gain1_t_item) | **DELETE** /xenon1t/tpc/gains/{tpcgain1tId} | Deletes a TpcGain1T document
+*TpcGain1TApi* | [**get_tpc_gain1_t_item**](docs/TpcGain1TApi.md#get_tpc_gain1_t_item) | **GET** /xenon1t/tpc/gains/{tpcgain1tId} | Retrieves a TpcGain1T document
+*TpcGain1TApi* | [**get_tpc_gains1_t**](docs/TpcGain1TApi.md#get_tpc_gains1_t) | **GET** /xenon1t/tpc/gains | Retrieves one or more TpcGains1T
+*TpcGain1TApi* | [**post_tpc_gains1_t**](docs/TpcGain1TApi.md#post_tpc_gains1_t) | **POST** /xenon1t/tpc/gains | Stores one or more TpcGains1T.
+*TpcGain1TApi* | [**put_tpc_gain1_t_item**](docs/TpcGain1TApi.md#put_tpc_gain1_t_item) | **PUT** /xenon1t/tpc/gains/{tpcgain1tId} | Replaces a TpcGain1T document
 *TpcGainMeasurementApi* | [**delete_tpc_gain_measurement_item**](docs/TpcGainMeasurementApi.md#delete_tpc_gain_measurement_item) | **DELETE** /tpc/gain_measurements/{tpcgainmeasurementId} | Deletes a TpcGainMeasurement document
 *TpcGainMeasurementApi* | [**get_tpc_gain_measurement_item**](docs/TpcGainMeasurementApi.md#get_tpc_gain_measurement_item) | **GET** /tpc/gain_measurements/{tpcgainmeasurementId} | Retrieves a TpcGainMeasurement document
 *TpcGainMeasurementApi* | [**get_tpc_gain_measurements**](docs/TpcGainMeasurementApi.md#get_tpc_gain_measurements) | **GET** /tpc/gain_measurements | Retrieves one or more TpcGainMeasurements
 *TpcGainMeasurementApi* | [**post_tpc_gain_measurements**](docs/TpcGainMeasurementApi.md#post_tpc_gain_measurements) | **POST** /tpc/gain_measurements | Stores one or more TpcGainMeasurements.
 *TpcGainMeasurementApi* | [**put_tpc_gain_measurement_item**](docs/TpcGainMeasurementApi.md#put_tpc_gain_measurement_item) | **PUT** /tpc/gain_measurements/{tpcgainmeasurementId} | Replaces a TpcGainMeasurement document
+*TpcGainMeasurement1TApi* | [**delete_tpc_gain_measurement1_t_item**](docs/TpcGainMeasurement1TApi.md#delete_tpc_gain_measurement1_t_item) | **DELETE** /xenon1t/tpc/gain_measurements/{tpcgainmeasurement1tId} | Deletes a TpcGainMeasurement1T document
+*TpcGainMeasurement1TApi* | [**get_tpc_gain_measurement1_t_item**](docs/TpcGainMeasurement1TApi.md#get_tpc_gain_measurement1_t_item) | **GET** /xenon1t/tpc/gain_measurements/{tpcgainmeasurement1tId} | Retrieves a TpcGainMeasurement1T document
+*TpcGainMeasurement1TApi* | [**get_tpc_gain_measurements1_t**](docs/TpcGainMeasurement1TApi.md#get_tpc_gain_measurements1_t) | **GET** /xenon1t/tpc/gain_measurements | Retrieves one or more TpcGainMeasurements1T
+*TpcGainMeasurement1TApi* | [**post_tpc_gain_measurements1_t**](docs/TpcGainMeasurement1TApi.md#post_tpc_gain_measurements1_t) | **POST** /xenon1t/tpc/gain_measurements | Stores one or more TpcGainMeasurements1T.
+*TpcGainMeasurement1TApi* | [**put_tpc_gain_measurement1_t_item**](docs/TpcGainMeasurement1TApi.md#put_tpc_gain_measurement1_t_item) | **PUT** /xenon1t/tpc/gain_measurements/{tpcgainmeasurement1tId} | Replaces a TpcGainMeasurement1T document
 *TpcInstallApi* | [**delete_tpc_install_item**](docs/TpcInstallApi.md#delete_tpc_install_item) | **DELETE** /tpc/installs/{tpcinstallId} | Deletes a TpcInstall document
 *TpcInstallApi* | [**get_tpc_install_item**](docs/TpcInstallApi.md#get_tpc_install_item) | **GET** /tpc/installs/{tpcinstallId} | Retrieves a TpcInstall document
 *TpcInstallApi* | [**get_tpc_install_item_by_uid**](docs/TpcInstallApi.md#get_tpc_install_item_by_uid) | **GET** /tpc/installs/{Uid} | Retrieves a TpcInstall document by uid
 *TpcInstallApi* | [**get_tpc_installs**](docs/TpcInstallApi.md#get_tpc_installs) | **GET** /tpc/installs | Retrieves one or more TpcInstalls
 *TpcInstallApi* | [**post_tpc_installs**](docs/TpcInstallApi.md#post_tpc_installs) | **POST** /tpc/installs | Stores one or more TpcInstalls.
 *TpcInstallApi* | [**put_tpc_install_item**](docs/TpcInstallApi.md#put_tpc_install_item) | **PUT** /tpc/installs/{tpcinstallId} | Replaces a TpcInstall document
+*TpcInstall1TApi* | [**delete_tpc_install1_t_item**](docs/TpcInstall1TApi.md#delete_tpc_install1_t_item) | **DELETE** /xenon1t/tpc/installs/{tpcinstall1tId} | Deletes a TpcInstall1T document
+*TpcInstall1TApi* | [**get_tpc_install1_t_item**](docs/TpcInstall1TApi.md#get_tpc_install1_t_item) | **GET** /xenon1t/tpc/installs/{tpcinstall1tId} | Retrieves a TpcInstall1T document
+*TpcInstall1TApi* | [**get_tpc_install1_t_item_by_uid**](docs/TpcInstall1TApi.md#get_tpc_install1_t_item_by_uid) | **GET** /xenon1t/tpc/installs/{Uid} | Retrieves a TpcInstall1T document by uid
+*TpcInstall1TApi* | [**get_tpc_installs1_t**](docs/TpcInstall1TApi.md#get_tpc_installs1_t) | **GET** /xenon1t/tpc/installs | Retrieves one or more TpcInstalls1T
+*TpcInstall1TApi* | [**post_tpc_installs1_t**](docs/TpcInstall1TApi.md#post_tpc_installs1_t) | **POST** /xenon1t/tpc/installs | Stores one or more TpcInstalls1T.
+*TpcInstall1TApi* | [**put_tpc_install1_t_item**](docs/TpcInstall1TApi.md#put_tpc_install1_t_item) | **PUT** /xenon1t/tpc/installs/{tpcinstall1tId} | Replaces a TpcInstall1T document
 *TpcPmtApi* | [**delete_tpc_pmt_item**](docs/TpcPmtApi.md#delete_tpc_pmt_item) | **DELETE** /tpc/pmts/{tpcpmtId} | Deletes a TpcPmt document
 *TpcPmtApi* | [**get_tpc_pmt_item**](docs/TpcPmtApi.md#get_tpc_pmt_item) | **GET** /tpc/pmts/{tpcpmtId} | Retrieves a TpcPmt document
 *TpcPmtApi* | [**get_tpc_pmt_item_by_serial_number**](docs/TpcPmtApi.md#get_tpc_pmt_item_by_serial_number) | **GET** /tpc/pmts/{Serial_Number} | Retrieves a TpcPmt document by serial_number
 *TpcPmtApi* | [**get_tpc_pmts**](docs/TpcPmtApi.md#get_tpc_pmts) | **GET** /tpc/pmts | Retrieves one or more TpcPmts
 *TpcPmtApi* | [**post_tpc_pmts**](docs/TpcPmtApi.md#post_tpc_pmts) | **POST** /tpc/pmts | Stores one or more TpcPmts.
 *TpcPmtApi* | [**put_tpc_pmt_item**](docs/TpcPmtApi.md#put_tpc_pmt_item) | **PUT** /tpc/pmts/{tpcpmtId} | Replaces a TpcPmt document
+*TpcPmt1TApi* | [**delete_tpc_pmt1_t_item**](docs/TpcPmt1TApi.md#delete_tpc_pmt1_t_item) | **DELETE** /xenon1t/tpc/pmts/{tpcpmt1tId} | Deletes a TpcPmt1T document
+*TpcPmt1TApi* | [**get_tpc_pmt1_t_item**](docs/TpcPmt1TApi.md#get_tpc_pmt1_t_item) | **GET** /xenon1t/tpc/pmts/{tpcpmt1tId} | Retrieves a TpcPmt1T document
+*TpcPmt1TApi* | [**get_tpc_pmt1_t_item_by_serial_number**](docs/TpcPmt1TApi.md#get_tpc_pmt1_t_item_by_serial_number) | **GET** /xenon1t/tpc/pmts/{Serial_Number} | Retrieves a TpcPmt1T document by serial_number
+*TpcPmt1TApi* | [**get_tpc_pmts1_t**](docs/TpcPmt1TApi.md#get_tpc_pmts1_t) | **GET** /xenon1t/tpc/pmts | Retrieves one or more TpcPmts1T
+*TpcPmt1TApi* | [**post_tpc_pmts1_t**](docs/TpcPmt1TApi.md#post_tpc_pmts1_t) | **POST** /xenon1t/tpc/pmts | Stores one or more TpcPmts1T.
+*TpcPmt1TApi* | [**put_tpc_pmt1_t_item**](docs/TpcPmt1TApi.md#put_tpc_pmt1_t_item) | **PUT** /xenon1t/tpc/pmts/{tpcpmt1tId} | Replaces a TpcPmt1T document
 *TpcPmtErrorApi* | [**delete_tpc_pmt_error_item**](docs/TpcPmtErrorApi.md#delete_tpc_pmt_error_item) | **DELETE** /tpc/pmt_errors/{tpcpmterrorId} | Deletes a TpcPmtError document
 *TpcPmtErrorApi* | [**get_tpc_pmt_error_item**](docs/TpcPmtErrorApi.md#get_tpc_pmt_error_item) | **GET** /tpc/pmt_errors/{tpcpmterrorId} | Retrieves a TpcPmtError document
 *TpcPmtErrorApi* | [**get_tpc_pmt_errors**](docs/TpcPmtErrorApi.md#get_tpc_pmt_errors) | **GET** /tpc/pmt_errors | Retrieves one or more TpcPmtErrors
 *TpcPmtErrorApi* | [**post_tpc_pmt_errors**](docs/TpcPmtErrorApi.md#post_tpc_pmt_errors) | **POST** /tpc/pmt_errors | Stores one or more TpcPmtErrors.
 *TpcPmtErrorApi* | [**put_tpc_pmt_error_item**](docs/TpcPmtErrorApi.md#put_tpc_pmt_error_item) | **PUT** /tpc/pmt_errors/{tpcpmterrorId} | Replaces a TpcPmtError document
+*TpcPmtError1TApi* | [**delete_tpc_pmt_error1_t_item**](docs/TpcPmtError1TApi.md#delete_tpc_pmt_error1_t_item) | **DELETE** /xenon1t/tpc/pmt_errors/{tpcpmterror1tId} | Deletes a TpcPmtError1T document
+*TpcPmtError1TApi* | [**get_tpc_pmt_error1_t_item**](docs/TpcPmtError1TApi.md#get_tpc_pmt_error1_t_item) | **GET** /xenon1t/tpc/pmt_errors/{tpcpmterror1tId} | Retrieves a TpcPmtError1T document
+*TpcPmtError1TApi* | [**get_tpc_pmt_errors1_t**](docs/TpcPmtError1TApi.md#get_tpc_pmt_errors1_t) | **GET** /xenon1t/tpc/pmt_errors | Retrieves one or more TpcPmtErrors1T
+*TpcPmtError1TApi* | [**post_tpc_pmt_errors1_t**](docs/TpcPmtError1TApi.md#post_tpc_pmt_errors1_t) | **POST** /xenon1t/tpc/pmt_errors | Stores one or more TpcPmtErrors1T.
+*TpcPmtError1TApi* | [**put_tpc_pmt_error1_t_item**](docs/TpcPmtError1TApi.md#put_tpc_pmt_error1_t_item) | **PUT** /xenon1t/tpc/pmt_errors/{tpcpmterror1tId} | Replaces a TpcPmtError1T document
 *TpcVoltageChangeApi* | [**delete_tpc_voltage_change_item**](docs/TpcVoltageChangeApi.md#delete_tpc_voltage_change_item) | **DELETE** /tpc/voltage_changes/{tpcvoltagechangeId} | Deletes a TpcVoltageChange document
 *TpcVoltageChangeApi* | [**get_tpc_voltage_change_item**](docs/TpcVoltageChangeApi.md#get_tpc_voltage_change_item) | **GET** /tpc/voltage_changes/{tpcvoltagechangeId} | Retrieves a TpcVoltageChange document
 *TpcVoltageChangeApi* | [**get_tpc_voltage_changes**](docs/TpcVoltageChangeApi.md#get_tpc_voltage_changes) | **GET** /tpc/voltage_changes | Retrieves one or more TpcVoltageChanges
 *TpcVoltageChangeApi* | [**post_tpc_voltage_changes**](docs/TpcVoltageChangeApi.md#post_tpc_voltage_changes) | **POST** /tpc/voltage_changes | Stores one or more TpcVoltageChanges.
 *TpcVoltageChangeApi* | [**put_tpc_voltage_change_item**](docs/TpcVoltageChangeApi.md#put_tpc_voltage_change_item) | **PUT** /tpc/voltage_changes/{tpcvoltagechangeId} | Replaces a TpcVoltageChange document
+*TpcVoltageChange1TApi* | [**delete_tpc_voltage_change1_t_item**](docs/TpcVoltageChange1TApi.md#delete_tpc_voltage_change1_t_item) | **DELETE** /xenon1t/tpc/voltage_changes/{tpcvoltagechange1tId} | Deletes a TpcVoltageChange1T document
+*TpcVoltageChange1TApi* | [**get_tpc_voltage_change1_t_item**](docs/TpcVoltageChange1TApi.md#get_tpc_voltage_change1_t_item) | **GET** /xenon1t/tpc/voltage_changes/{tpcvoltagechange1tId} | Retrieves a TpcVoltageChange1T document
+*TpcVoltageChange1TApi* | [**get_tpc_voltage_changes1_t**](docs/TpcVoltageChange1TApi.md#get_tpc_voltage_changes1_t) | **GET** /xenon1t/tpc/voltage_changes | Retrieves one or more TpcVoltageChanges1T
+*TpcVoltageChange1TApi* | [**post_tpc_voltage_changes1_t**](docs/TpcVoltageChange1TApi.md#post_tpc_voltage_changes1_t) | **POST** /xenon1t/tpc/voltage_changes | Stores one or more TpcVoltageChanges1T.
+*TpcVoltageChange1TApi* | [**put_tpc_voltage_change1_t_item**](docs/TpcVoltageChange1TApi.md#put_tpc_voltage_change1_t_item) | **PUT** /xenon1t/tpc/voltage_changes/{tpcvoltagechange1tId} | Replaces a TpcVoltageChange1T document
 *TpcVoltageMapApi* | [**delete_tpc_voltage_map_item**](docs/TpcVoltageMapApi.md#delete_tpc_voltage_map_item) | **DELETE** /tpc/voltage_maps/{tpcvoltagemapId} | Deletes a TpcVoltageMap document
 *TpcVoltageMapApi* | [**delete_tpc_voltage_maps**](docs/TpcVoltageMapApi.md#delete_tpc_voltage_maps) | **DELETE** /tpc/voltage_maps | Deletes all TpcVoltageMaps
 *TpcVoltageMapApi* | [**get_tpc_voltage_map_item**](docs/TpcVoltageMapApi.md#get_tpc_voltage_map_item) | **GET** /tpc/voltage_maps/{tpcvoltagemapId} | Retrieves a TpcVoltageMap document
@@ -246,11 +384,20 @@ Class | Method | HTTP request | Description
 *TpcVoltageMapApi* | [**get_tpc_voltage_maps**](docs/TpcVoltageMapApi.md#get_tpc_voltage_maps) | **GET** /tpc/voltage_maps | Retrieves one or more TpcVoltageMaps
 *TpcVoltageMapApi* | [**post_tpc_voltage_maps**](docs/TpcVoltageMapApi.md#post_tpc_voltage_maps) | **POST** /tpc/voltage_maps | Stores one or more TpcVoltageMaps.
 *TpcVoltageMapApi* | [**put_tpc_voltage_map_item**](docs/TpcVoltageMapApi.md#put_tpc_voltage_map_item) | **PUT** /tpc/voltage_maps/{tpcvoltagemapId} | Replaces a TpcVoltageMap document
+*TpcVoltageMap1TApi* | [**delete_tpc_voltage_map1_t_item**](docs/TpcVoltageMap1TApi.md#delete_tpc_voltage_map1_t_item) | **DELETE** /xenon1t/tpc/voltage_maps/{tpcvoltagemap1tId} | Deletes a TpcVoltageMap1T document
+*TpcVoltageMap1TApi* | [**delete_tpc_voltage_maps1_t**](docs/TpcVoltageMap1TApi.md#delete_tpc_voltage_maps1_t) | **DELETE** /xenon1t/tpc/voltage_maps | Deletes all TpcVoltageMaps1T
+*TpcVoltageMap1TApi* | [**get_tpc_voltage_map1_t_item**](docs/TpcVoltageMap1TApi.md#get_tpc_voltage_map1_t_item) | **GET** /xenon1t/tpc/voltage_maps/{tpcvoltagemap1tId} | Retrieves a TpcVoltageMap1T document
+*TpcVoltageMap1TApi* | [**get_tpc_voltage_map1_t_item_by_name**](docs/TpcVoltageMap1TApi.md#get_tpc_voltage_map1_t_item_by_name) | **GET** /xenon1t/tpc/voltage_maps/{Name} | Retrieves a TpcVoltageMap1T document by name
+*TpcVoltageMap1TApi* | [**get_tpc_voltage_maps1_t**](docs/TpcVoltageMap1TApi.md#get_tpc_voltage_maps1_t) | **GET** /xenon1t/tpc/voltage_maps | Retrieves one or more TpcVoltageMaps1T
+*TpcVoltageMap1TApi* | [**post_tpc_voltage_maps1_t**](docs/TpcVoltageMap1TApi.md#post_tpc_voltage_maps1_t) | **POST** /xenon1t/tpc/voltage_maps | Stores one or more TpcVoltageMaps1T.
+*TpcVoltageMap1TApi* | [**put_tpc_voltage_map1_t_item**](docs/TpcVoltageMap1TApi.md#put_tpc_voltage_map1_t_item) | **PUT** /xenon1t/tpc/voltage_maps/{tpcvoltagemap1tId} | Replaces a TpcVoltageMap1T document
 *TpcVoltageMapNameApi* | [**get_tpc_voltage_map_names**](docs/TpcVoltageMapNameApi.md#get_tpc_voltage_map_names) | **GET** /tpc/voltage_maps/names | Retrieves one or more TpcVoltageMapNames
+*TpcVoltageMapName1TApi* | [**get_tpc_voltage_map_names1_t**](docs/TpcVoltageMapName1TApi.md#get_tpc_voltage_map_names1_t) | **GET** /xenon1t/tpc/voltage_maps/names | Retrieves one or more TpcVoltageMapNames1T
 
 
 ## Documentation For Models
 
+ - [Account](docs/Account.md)
  - [Error](docs/Error.md)
  - [ErrorError](docs/ErrorError.md)
  - [InlineResponse200](docs/InlineResponse200.md)
@@ -280,23 +427,65 @@ Class | Method | HTTP request | Description
  - [InlineResponse20030](docs/InlineResponse20030.md)
  - [InlineResponse20031](docs/InlineResponse20031.md)
  - [InlineResponse20032](docs/InlineResponse20032.md)
+ - [InlineResponse20033](docs/InlineResponse20033.md)
+ - [InlineResponse20034](docs/InlineResponse20034.md)
+ - [InlineResponse20035](docs/InlineResponse20035.md)
+ - [InlineResponse20036](docs/InlineResponse20036.md)
+ - [InlineResponse20037](docs/InlineResponse20037.md)
+ - [InlineResponse20038](docs/InlineResponse20038.md)
+ - [InlineResponse20039](docs/InlineResponse20039.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
+ - [InlineResponse20040](docs/InlineResponse20040.md)
+ - [InlineResponse20041](docs/InlineResponse20041.md)
+ - [InlineResponse20042](docs/InlineResponse20042.md)
+ - [InlineResponse20043](docs/InlineResponse20043.md)
+ - [InlineResponse20044](docs/InlineResponse20044.md)
+ - [InlineResponse20045](docs/InlineResponse20045.md)
+ - [InlineResponse20046](docs/InlineResponse20046.md)
+ - [InlineResponse20047](docs/InlineResponse20047.md)
+ - [InlineResponse20048](docs/InlineResponse20048.md)
+ - [InlineResponse20049](docs/InlineResponse20049.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
+ - [InlineResponse20050](docs/InlineResponse20050.md)
+ - [InlineResponse20051](docs/InlineResponse20051.md)
+ - [InlineResponse20052](docs/InlineResponse20052.md)
+ - [InlineResponse20053](docs/InlineResponse20053.md)
+ - [InlineResponse20054](docs/InlineResponse20054.md)
+ - [InlineResponse20055](docs/InlineResponse20055.md)
+ - [InlineResponse20056](docs/InlineResponse20056.md)
+ - [InlineResponse20057](docs/InlineResponse20057.md)
+ - [InlineResponse20058](docs/InlineResponse20058.md)
+ - [InlineResponse20059](docs/InlineResponse20059.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
+ - [InlineResponse20060](docs/InlineResponse20060.md)
  - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse2009](docs/InlineResponse2009.md)
+ - [MuvetoAccount](docs/MuvetoAccount.md)
+ - [MuvetoAccount1T](docs/MuvetoAccount1T.md)
  - [MuvetoAfterpulse](docs/MuvetoAfterpulse.md)
+ - [MuvetoAfterpulse1T](docs/MuvetoAfterpulse1T.md)
  - [MuvetoCurrentChange](docs/MuvetoCurrentChange.md)
+ - [MuvetoCurrentChange1T](docs/MuvetoCurrentChange1T.md)
  - [MuvetoDarkCountRate](docs/MuvetoDarkCountRate.md)
+ - [MuvetoDarkCountRate1T](docs/MuvetoDarkCountRate1T.md)
  - [MuvetoGain](docs/MuvetoGain.md)
+ - [MuvetoGain1T](docs/MuvetoGain1T.md)
  - [MuvetoGainMeasurement](docs/MuvetoGainMeasurement.md)
+ - [MuvetoGainMeasurement1T](docs/MuvetoGainMeasurement1T.md)
  - [MuvetoInstall](docs/MuvetoInstall.md)
+ - [MuvetoInstall1T](docs/MuvetoInstall1T.md)
  - [MuvetoPmt](docs/MuvetoPmt.md)
+ - [MuvetoPmt1T](docs/MuvetoPmt1T.md)
  - [MuvetoPmtError](docs/MuvetoPmtError.md)
+ - [MuvetoPmtError1T](docs/MuvetoPmtError1T.md)
  - [MuvetoVoltageChange](docs/MuvetoVoltageChange.md)
+ - [MuvetoVoltageChange1T](docs/MuvetoVoltageChange1T.md)
  - [MuvetoVoltageMap](docs/MuvetoVoltageMap.md)
+ - [MuvetoVoltageMap1T](docs/MuvetoVoltageMap1T.md)
  - [MuvetoVoltageMapName](docs/MuvetoVoltageMapName.md)
+ - [MuvetoVoltageMapName1T](docs/MuvetoVoltageMapName1T.md)
+ - [NvetoAccount](docs/NvetoAccount.md)
  - [NvetoAfterpulse](docs/NvetoAfterpulse.md)
  - [NvetoCurrentChange](docs/NvetoCurrentChange.md)
  - [NvetoDarkCountRate](docs/NvetoDarkCountRate.md)
@@ -311,17 +500,30 @@ Class | Method | HTTP request | Description
  - [ResponeLinks](docs/ResponeLinks.md)
  - [ResponeLinksParent](docs/ResponeLinksParent.md)
  - [ResponeMetadata](docs/ResponeMetadata.md)
+ - [TpcAccount](docs/TpcAccount.md)
+ - [TpcAccount1T](docs/TpcAccount1T.md)
  - [TpcAfterpulse](docs/TpcAfterpulse.md)
+ - [TpcAfterpulse1T](docs/TpcAfterpulse1T.md)
  - [TpcCurrentChange](docs/TpcCurrentChange.md)
+ - [TpcCurrentChange1T](docs/TpcCurrentChange1T.md)
  - [TpcDarkCountRate](docs/TpcDarkCountRate.md)
+ - [TpcDarkCountRate1T](docs/TpcDarkCountRate1T.md)
  - [TpcGain](docs/TpcGain.md)
+ - [TpcGain1T](docs/TpcGain1T.md)
  - [TpcGainMeasurement](docs/TpcGainMeasurement.md)
+ - [TpcGainMeasurement1T](docs/TpcGainMeasurement1T.md)
  - [TpcInstall](docs/TpcInstall.md)
+ - [TpcInstall1T](docs/TpcInstall1T.md)
  - [TpcPmt](docs/TpcPmt.md)
+ - [TpcPmt1T](docs/TpcPmt1T.md)
  - [TpcPmtError](docs/TpcPmtError.md)
+ - [TpcPmtError1T](docs/TpcPmtError1T.md)
  - [TpcVoltageChange](docs/TpcVoltageChange.md)
+ - [TpcVoltageChange1T](docs/TpcVoltageChange1T.md)
  - [TpcVoltageMap](docs/TpcVoltageMap.md)
+ - [TpcVoltageMap1T](docs/TpcVoltageMap1T.md)
  - [TpcVoltageMapName](docs/TpcVoltageMapName.md)
+ - [TpcVoltageMapName1T](docs/TpcVoltageMapName1T.md)
  - [TpcVoltageMapVoltages](docs/TpcVoltageMapVoltages.md)
 
 

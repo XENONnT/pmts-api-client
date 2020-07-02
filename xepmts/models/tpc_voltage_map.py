@@ -37,6 +37,7 @@ class TpcVoltageMap(object):
         'name': 'str',
         'experiment': 'str',
         'detector': 'str',
+        'active': 'bool',
         'voltages': 'list[TpcVoltageMapVoltages]',
         'created_by': 'str',
         'comments': 'str',
@@ -48,6 +49,7 @@ class TpcVoltageMap(object):
         'name': 'name',
         'experiment': 'experiment',
         'detector': 'detector',
+        'active': 'active',
         'voltages': 'voltages',
         'created_by': 'created_by',
         'comments': 'comments',
@@ -55,7 +57,7 @@ class TpcVoltageMap(object):
         'id': '_id'
     }
 
-    def __init__(self, name=None, experiment='xenonnt', detector='tpc', voltages=None, created_by=None, comments=None, date=None, id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, experiment='xenonnt', detector='tpc', active=True, voltages=None, created_by=None, comments=None, date=None, id=None, local_vars_configuration=None):  # noqa: E501
         """TpcVoltageMap - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -64,6 +66,7 @@ class TpcVoltageMap(object):
         self._name = None
         self._experiment = None
         self._detector = None
+        self._active = None
         self._voltages = None
         self._created_by = None
         self._comments = None
@@ -74,6 +77,8 @@ class TpcVoltageMap(object):
         self.name = name
         self.experiment = experiment
         self.detector = detector
+        if active is not None:
+            self.active = active
         if voltages is not None:
             self.voltages = voltages
         if created_by is not None:
@@ -165,6 +170,27 @@ class TpcVoltageMap(object):
             )
 
         self._detector = detector
+
+    @property
+    def active(self):
+        """Gets the active of this TpcVoltageMap.  # noqa: E501
+
+
+        :return: The active of this TpcVoltageMap.  # noqa: E501
+        :rtype: bool
+        """
+        return self._active
+
+    @active.setter
+    def active(self, active):
+        """Sets the active of this TpcVoltageMap.
+
+
+        :param active: The active of this TpcVoltageMap.  # noqa: E501
+        :type: bool
+        """
+
+        self._active = active
 
     @property
     def voltages(self):

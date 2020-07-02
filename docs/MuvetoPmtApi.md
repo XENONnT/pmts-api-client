@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_pmts**
-> InlineResponse20024 get_muveto_pmts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20027 get_muveto_pmts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoPmts
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[NvetoVoltageMap]**](NvetoVoltageMap.md) |  | [optional] 
+**items** | [**list[NvetoVoltageChange]**](NvetoVoltageChange.md) |  | [optional] 
 **meta** | [**ResponeMetadata**](ResponeMetadata.md) |  | [optional] 
 **links** | [**ResponeLinks**](ResponeLinks.md) |  | [optional] 
 

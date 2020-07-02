@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nveto_voltage_maps**
-> InlineResponse20018 get_nveto_voltage_maps(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20020 get_nveto_voltage_maps(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more NvetoVoltageMaps
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 

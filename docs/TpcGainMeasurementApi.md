@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_gain_measurements**
-> InlineResponse20012 get_tpc_gain_measurements(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20011 get_tpc_gain_measurements(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcGainMeasurements
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 

@@ -34,7 +34,7 @@ class InlineResponse20015(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[NvetoPmt]',
+        'items': 'list[NvetoGain]',
         'meta': 'ResponeMetadata',
         'links': 'ResponeLinks'
     }
@@ -69,7 +69,7 @@ class InlineResponse20015(object):
 
 
         :return: The items of this InlineResponse20015.  # noqa: E501
-        :rtype: list[NvetoPmt]
+        :rtype: list[NvetoGain]
         """
         return self._items
 
@@ -79,7 +79,7 @@ class InlineResponse20015(object):
 
 
         :param items: The items of this InlineResponse20015.  # noqa: E501
-        :type: list[NvetoPmt]
+        :type: list[NvetoGain]
         """
 
         self._items = items

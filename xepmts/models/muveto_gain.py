@@ -88,14 +88,12 @@ class MuvetoGain(object):
 
         self.detector = detector
         self.experiment = experiment
-        if run_id is not None:
-            self.run_id = run_id
+        self.run_id = run_id
         if timestamp is not None:
             self.timestamp = timestamp
         self.pmt_index = pmt_index
         self.gain = gain
-        if gain_err is not None:
-            self.gain_err = gain_err
+        self.gain_err = gain_err
         if gain_stat_err is not None:
             self.gain_stat_err = gain_stat_err
         if gain_sys_err is not None:
@@ -185,6 +183,8 @@ class MuvetoGain(object):
         :param run_id: The run_id of this MuvetoGain.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and run_id is None:  # noqa: E501
+            raise ValueError("Invalid value for `run_id`, must not be `None`")  # noqa: E501
 
         self._run_id = run_id
 
@@ -273,6 +273,8 @@ class MuvetoGain(object):
         :param gain_err: The gain_err of this MuvetoGain.  # noqa: E501
         :type: float
         """
+        if self.local_vars_configuration.client_side_validation and gain_err is None:  # noqa: E501
+            raise ValueError("Invalid value for `gain_err`, must not be `None`")  # noqa: E501
 
         self._gain_err = gain_err
 

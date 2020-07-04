@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[TpcPmtError1T]**](TpcPmtError1T.md) |  | [optional] 
+**items** | [**list[TpcCurrentChange1t]**](TpcCurrentChange1t.md) |  | [optional] 
 **meta** | [**ResponeMetadata**](ResponeMetadata.md) |  | [optional] 
 **links** | [**ResponeLinks**](ResponeLinks.md) |  | [optional] 
 

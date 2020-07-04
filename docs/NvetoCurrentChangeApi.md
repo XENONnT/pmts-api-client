@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nveto_current_changes**
-> InlineResponse20017 get_nveto_current_changes(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20016 get_nveto_current_changes(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more NvetoCurrentChanges
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 

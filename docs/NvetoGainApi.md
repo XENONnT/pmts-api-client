@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nveto_gains**
-> InlineResponse20016 get_nveto_gains(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20015 get_nveto_gains(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more NvetoGains
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 

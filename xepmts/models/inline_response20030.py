@@ -34,7 +34,7 @@ class InlineResponse20030(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[MuvetoVoltageChange]',
+        'items': 'list[MuvetoVoltageMap]',
         'meta': 'ResponeMetadata',
         'links': 'ResponeLinks'
     }
@@ -69,7 +69,7 @@ class InlineResponse20030(object):
 
 
         :return: The items of this InlineResponse20030.  # noqa: E501
-        :rtype: list[MuvetoVoltageChange]
+        :rtype: list[MuvetoVoltageMap]
         """
         return self._items
 
@@ -79,7 +79,7 @@ class InlineResponse20030(object):
 
 
         :param items: The items of this InlineResponse20030.  # noqa: E501
-        :type: list[MuvetoVoltageChange]
+        :type: list[MuvetoVoltageMap]
         """
 
         self._items = items

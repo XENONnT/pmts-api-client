@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_gains**
-> InlineResponse20028 get_muveto_gains(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20026 get_muveto_gains(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoGains
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 

@@ -5,11 +5,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **detector** | **str** |  | [default to 'muveto']
 **experiment** | **str** |  | [default to 'xenonnt']
-**run_id** | **str** |  | [optional] 
+**run_id** | **str** |  | 
 **timestamp** | **int** |  | [optional] 
 **pmt_index** | **int** |  | 
 **gain** | **float** |  | 
-**gain_err** | **float** |  | [optional] 
+**gain_err** | **float** |  | 
 **gain_stat_err** | **float** |  | [optional] 
 **gain_sys_err** | **float** |  | [optional] 
 **voltage** | **float** |  | [optional] 

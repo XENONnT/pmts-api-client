@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_afterpulses**
-> InlineResponse20031 get_muveto_afterpulses(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20029 get_muveto_afterpulses(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoAfterpulses
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 

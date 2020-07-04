@@ -34,16 +34,18 @@ class InlineResponse20045(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[TpcVoltageMapName1T]',
-        'meta': 'ResponeMetadata'
+        'items': 'list[MuvetoDarkCountRate1t]',
+        'meta': 'ResponeMetadata',
+        'links': 'ResponeLinks'
     }
 
     attribute_map = {
         'items': '_items',
-        'meta': '_meta'
+        'meta': '_meta',
+        'links': '_links'
     }
 
-    def __init__(self, items=None, meta=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, items=None, meta=None, links=None, local_vars_configuration=None):  # noqa: E501
         """InlineResponse20045 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,12 +53,15 @@ class InlineResponse20045(object):
 
         self._items = None
         self._meta = None
+        self._links = None
         self.discriminator = None
 
         if items is not None:
             self.items = items
         if meta is not None:
             self.meta = meta
+        if links is not None:
+            self.links = links
 
     @property
     def items(self):
@@ -64,7 +69,7 @@ class InlineResponse20045(object):
 
 
         :return: The items of this InlineResponse20045.  # noqa: E501
-        :rtype: list[TpcVoltageMapName1T]
+        :rtype: list[MuvetoDarkCountRate1t]
         """
         return self._items
 
@@ -74,7 +79,7 @@ class InlineResponse20045(object):
 
 
         :param items: The items of this InlineResponse20045.  # noqa: E501
-        :type: list[TpcVoltageMapName1T]
+        :type: list[MuvetoDarkCountRate1t]
         """
 
         self._items = items
@@ -99,6 +104,27 @@ class InlineResponse20045(object):
         """
 
         self._meta = meta
+
+    @property
+    def links(self):
+        """Gets the links of this InlineResponse20045.  # noqa: E501
+
+
+        :return: The links of this InlineResponse20045.  # noqa: E501
+        :rtype: ResponeLinks
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """Sets the links of this InlineResponse20045.
+
+
+        :param links: The links of this InlineResponse20045.  # noqa: E501
+        :type: ResponeLinks
+        """
+
+        self._links = links
 
     def to_dict(self):
         """Returns the model properties as a dict"""

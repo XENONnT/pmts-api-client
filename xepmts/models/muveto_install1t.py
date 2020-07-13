@@ -240,12 +240,6 @@ class MuvetoInstall1t(object):
         :param array: The array of this MuvetoInstall1t.  # noqa: E501
         :type: str
         """
-        allowed_values = ["top", "bottom", "diagnostic", "na", "unknown"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and array not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `array` ({0}), must be one of {1}"  # noqa: E501
-                .format(array, allowed_values)
-            )
 
         self._array = array
 

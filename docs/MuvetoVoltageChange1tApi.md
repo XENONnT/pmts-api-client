@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_voltage_change1ts**
-> InlineResponse20050 get_muveto_voltage_change1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20056 get_muveto_voltage_change1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoVoltageChange1ts
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20056**](InlineResponse20056.md)
 
 ### Authorization
 

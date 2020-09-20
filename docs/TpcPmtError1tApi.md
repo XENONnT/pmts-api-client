@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_pmt_error1ts**
-> InlineResponse20035 get_tpc_pmt_error1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20040 get_tpc_pmt_error1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcPmtError1ts
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20040**](InlineResponse20040.md)
 
 ### Authorization
 

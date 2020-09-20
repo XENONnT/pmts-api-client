@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_pmts**
-> InlineResponse2002 get_tpc_pmts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse2003 get_tpc_pmts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcPmts
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 

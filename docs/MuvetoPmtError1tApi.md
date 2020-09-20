@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_pmt_error1ts**
-> InlineResponse20046 get_muveto_pmt_error1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20052 get_muveto_pmt_error1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoPmtError1ts
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20046**](InlineResponse20046.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 

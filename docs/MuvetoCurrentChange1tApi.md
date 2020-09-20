@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_current_change1ts**
-> InlineResponse20049 get_muveto_current_change1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20055 get_muveto_current_change1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoCurrentChange1ts
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 

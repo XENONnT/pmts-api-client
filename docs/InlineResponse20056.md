@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[MuvetoVoltageMap1T]**](MuvetoVoltageMap1T.md) |  | [optional] 
+**items** | [**list[MuvetoVoltageChange1t]**](MuvetoVoltageChange1t.md) |  | [optional] 
 **meta** | [**ResponeMetadata**](ResponeMetadata.md) |  | [optional] 
 **links** | [**ResponeLinks**](ResponeLinks.md) |  | [optional] 
 

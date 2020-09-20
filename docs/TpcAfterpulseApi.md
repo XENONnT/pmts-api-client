@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_afterpulses**
-> InlineResponse2006 get_tpc_afterpulses(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse2007 get_tpc_afterpulses(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcAfterpulses
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 

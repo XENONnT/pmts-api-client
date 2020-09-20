@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_nveto_voltage_map_names**
-> InlineResponse20020 get_nveto_voltage_map_names(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20023 get_nveto_voltage_map_names(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more NvetoVoltageMapNames
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 

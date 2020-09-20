@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_tpc_voltage_map_name1ts**
-> InlineResponse20042 get_tpc_voltage_map_name1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20047 get_tpc_voltage_map_name1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcVoltageMapName1ts
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 

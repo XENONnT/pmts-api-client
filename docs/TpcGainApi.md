@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_gains**
-> InlineResponse2003 get_tpc_gains(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse2004 get_tpc_gains(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcGains
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 

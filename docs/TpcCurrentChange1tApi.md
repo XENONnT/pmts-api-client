@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_current_change1ts**
-> InlineResponse20038 get_tpc_current_change1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20043 get_tpc_current_change1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcCurrentChange1ts
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 

@@ -18,6 +18,7 @@ from __future__ import absolute_import
 from xepmts.models.account import Account
 from xepmts.models.error import Error
 from xepmts.models.error_error import ErrorError
+from xepmts.models.high_voltage_change import HighVoltageChange
 from xepmts.models.inline_response200 import InlineResponse200
 from xepmts.models.inline_response2001 import InlineResponse2001
 from xepmts.models.inline_response20010 import InlineResponse20010
@@ -70,7 +71,13 @@ from xepmts.models.inline_response20052 import InlineResponse20052
 from xepmts.models.inline_response20053 import InlineResponse20053
 from xepmts.models.inline_response20054 import InlineResponse20054
 from xepmts.models.inline_response20055 import InlineResponse20055
+from xepmts.models.inline_response20056 import InlineResponse20056
+from xepmts.models.inline_response20057 import InlineResponse20057
+from xepmts.models.inline_response20058 import InlineResponse20058
+from xepmts.models.inline_response20059 import InlineResponse20059
 from xepmts.models.inline_response2006 import InlineResponse2006
+from xepmts.models.inline_response20060 import InlineResponse20060
+from xepmts.models.inline_response20061 import InlineResponse20061
 from xepmts.models.inline_response2007 import InlineResponse2007
 from xepmts.models.inline_response2008 import InlineResponse2008
 from xepmts.models.inline_response2009 import InlineResponse2009
@@ -84,6 +91,8 @@ from xepmts.models.muveto_gain import MuvetoGain
 from xepmts.models.muveto_gain1t import MuvetoGain1t
 from xepmts.models.muveto_gain_measurement import MuvetoGainMeasurement
 from xepmts.models.muveto_gain_measurement1t import MuvetoGainMeasurement1t
+from xepmts.models.muveto_gain_model import MuvetoGainModel
+from xepmts.models.muveto_gain_model1t import MuvetoGainModel1t
 from xepmts.models.muveto_install import MuvetoInstall
 from xepmts.models.muveto_install1t import MuvetoInstall1t
 from xepmts.models.muveto_pmt import MuvetoPmt
@@ -101,6 +110,7 @@ from xepmts.models.nveto_current_change import NvetoCurrentChange
 from xepmts.models.nveto_dark_count_rate import NvetoDarkCountRate
 from xepmts.models.nveto_gain import NvetoGain
 from xepmts.models.nveto_gain_measurement import NvetoGainMeasurement
+from xepmts.models.nveto_gain_model import NvetoGainModel
 from xepmts.models.nveto_install import NvetoInstall
 from xepmts.models.nveto_pmt import NvetoPmt
 from xepmts.models.nveto_pmt_error import NvetoPmtError
@@ -120,6 +130,8 @@ from xepmts.models.tpc_gain import TpcGain
 from xepmts.models.tpc_gain1t import TpcGain1t
 from xepmts.models.tpc_gain_measurement import TpcGainMeasurement
 from xepmts.models.tpc_gain_measurement1t import TpcGainMeasurement1t
+from xepmts.models.tpc_gain_model import TpcGainModel
+from xepmts.models.tpc_gain_model1t import TpcGainModel1t
 from xepmts.models.tpc_install import TpcInstall
 from xepmts.models.tpc_install1t import TpcInstall1t
 from xepmts.models.tpc_pmt import TpcPmt

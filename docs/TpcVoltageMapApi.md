@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_voltage_maps**
-> InlineResponse2007 get_tpc_voltage_maps(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse2008 get_tpc_voltage_maps(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcVoltageMaps
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 

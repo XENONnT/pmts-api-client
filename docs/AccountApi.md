@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_accounts**
-> InlineResponse20010 get_accounts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20012 get_accounts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more Accounts
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 

@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_installs**
-> InlineResponse2009 get_tpc_installs(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20010 get_tpc_installs(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcInstalls
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 

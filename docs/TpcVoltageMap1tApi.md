@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_voltage_map1ts**
-> InlineResponse20041 get_tpc_voltage_map1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20046 get_tpc_voltage_map1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcVoltageMap1ts
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**InlineResponse20046**](InlineResponse20046.md)
 
 ### Authorization
 

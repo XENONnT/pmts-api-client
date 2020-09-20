@@ -4,6 +4,7 @@ from __future__ import absolute_import
 
 # import apis into api package
 from xepmts.api.account_api import AccountApi
+from xepmts.api.high_voltage_change_api import HighVoltageChangeApi
 from xepmts.api.muveto_afterpulse_api import MuvetoAfterpulseApi
 from xepmts.api.muveto_afterpulse1t_api import MuvetoAfterpulse1tApi
 from xepmts.api.muveto_current_change_api import MuvetoCurrentChangeApi
@@ -14,6 +15,8 @@ from xepmts.api.muveto_gain_api import MuvetoGainApi
 from xepmts.api.muveto_gain1t_api import MuvetoGain1tApi
 from xepmts.api.muveto_gain_measurement_api import MuvetoGainMeasurementApi
 from xepmts.api.muveto_gain_measurement1t_api import MuvetoGainMeasurement1tApi
+from xepmts.api.muveto_gain_model_api import MuvetoGainModelApi
+from xepmts.api.muveto_gain_model1t_api import MuvetoGainModel1tApi
 from xepmts.api.muveto_install_api import MuvetoInstallApi
 from xepmts.api.muveto_install1t_api import MuvetoInstall1tApi
 from xepmts.api.muveto_pmt_api import MuvetoPmtApi
@@ -31,6 +34,7 @@ from xepmts.api.nveto_current_change_api import NvetoCurrentChangeApi
 from xepmts.api.nveto_dark_count_rate_api import NvetoDarkCountRateApi
 from xepmts.api.nveto_gain_api import NvetoGainApi
 from xepmts.api.nveto_gain_measurement_api import NvetoGainMeasurementApi
+from xepmts.api.nveto_gain_model_api import NvetoGainModelApi
 from xepmts.api.nveto_install_api import NvetoInstallApi
 from xepmts.api.nveto_pmt_api import NvetoPmtApi
 from xepmts.api.nveto_pmt_error_api import NvetoPmtErrorApi
@@ -47,6 +51,8 @@ from xepmts.api.tpc_gain_api import TpcGainApi
 from xepmts.api.tpc_gain1t_api import TpcGain1tApi
 from xepmts.api.tpc_gain_measurement_api import TpcGainMeasurementApi
 from xepmts.api.tpc_gain_measurement1t_api import TpcGainMeasurement1tApi
+from xepmts.api.tpc_gain_model_api import TpcGainModelApi
+from xepmts.api.tpc_gain_model1t_api import TpcGainModel1tApi
 from xepmts.api.tpc_install_api import TpcInstallApi
 from xepmts.api.tpc_install1t_api import TpcInstall1tApi
 from xepmts.api.tpc_pmt_api import TpcPmtApi

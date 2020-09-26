@@ -30,7 +30,7 @@ setup(
     description="XENON PMT API",
     author="Yossi Mosbacher",
     author_email="joe.mosbacher@gmail.com",
-    url="https://github.com/XENONnT/pmts-api-client",
+    url="https://pypi.org/project/xepmts",
     keywords=["OpenAPI", "OpenAPI-Generator", "XENON PMT API"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),

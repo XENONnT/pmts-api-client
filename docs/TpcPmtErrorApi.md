@@ -1,12 +1,13 @@
 # xepmts.TpcPmtErrorApi
 
-All URIs are relative to *https://api.pmts.xenonnt.org/v1*
+All URIs are relative to *https://xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_tpc_pmt_error_item**](TpcPmtErrorApi.md#delete_tpc_pmt_error_item) | **DELETE** /tpc/pmt_errors/{tpcpmterrorId} | Deletes a TpcPmtError document
 [**get_tpc_pmt_error_item**](TpcPmtErrorApi.md#get_tpc_pmt_error_item) | **GET** /tpc/pmt_errors/{tpcpmterrorId} | Retrieves a TpcPmtError document
 [**get_tpc_pmt_errors**](TpcPmtErrorApi.md#get_tpc_pmt_errors) | **GET** /tpc/pmt_errors | Retrieves one or more TpcPmtErrors
+[**patch_tpc_pmt_error_item**](TpcPmtErrorApi.md#patch_tpc_pmt_error_item) | **PATCH** /tpc/pmt_errors/{tpcpmterrorId} | Updates a TpcPmtError document
 [**post_tpc_pmt_errors**](TpcPmtErrorApi.md#post_tpc_pmt_errors) | **POST** /tpc/pmt_errors | Stores one or more TpcPmtErrors.
 [**put_tpc_pmt_error_item**](TpcPmtErrorApi.md#put_tpc_pmt_error_item) | **PUT** /tpc/pmt_errors/{tpcpmterrorId} | Replaces a TpcPmtError document
 
@@ -29,8 +30,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -92,8 +93,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -137,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_pmt_errors**
-> InlineResponse2002 get_tpc_pmt_errors(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse2009 get_tpc_pmt_errors(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcPmtErrors
 
@@ -154,8 +155,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -187,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -202,6 +203,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | An array of TpcPmtErrors |  -  |
+**0** | An error message |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_tpc_pmt_error_item**
+> patch_tpc_pmt_error_item(tpcpmterror_id, tpc_pmt_error, if_match=if_match)
+
+Updates a TpcPmtError document
+
+### Example
+
+* Bearer Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+configuration = xepmts.Configuration()
+# Configure Bearer authorization: BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+
+# Enter a context with an instance of the API client
+with xepmts.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xepmts.TpcPmtErrorApi(api_client)
+    tpcpmterror_id = 'tpcpmterror_id_example' # str | 
+tpc_pmt_error = xepmts.TpcPmtError() # TpcPmtError | A TpcPmtError or list of TpcPmtError documents
+if_match = 'if_match_example' # str | Current value of the _etag field (optional)
+
+    try:
+        # Updates a TpcPmtError document
+        api_instance.patch_tpc_pmt_error_item(tpcpmterror_id, tpc_pmt_error, if_match=if_match)
+    except ApiException as e:
+        print("Exception when calling TpcPmtErrorApi->patch_tpc_pmt_error_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tpcpmterror_id** | **str**|  | 
+ **tpc_pmt_error** | [**TpcPmtError**](TpcPmtError.md)| A TpcPmtError or list of TpcPmtError documents | 
+ **if_match** | **str**| Current value of the _etag field | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | TpcPmtError document updated successfully |  -  |
 **0** | An error message |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -224,8 +290,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -285,8 +351,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

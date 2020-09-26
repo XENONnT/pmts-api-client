@@ -56,7 +56,7 @@ class Configuration(object):
 
     _default = None
 
-    def __init__(self, host="https://api.pmts.xenonnt.org/v1",
+    def __init__(self, host="https://xenon-pmts.uc.r.appspot.com/v1",
                  api_key=None, api_key_prefix=None,
                  username=None, password=None,
                  discard_unknown_keys=False,
@@ -344,7 +344,7 @@ class Configuration(object):
         """
         return [
             {
-                'url': "https://api.pmts.xenonnt.org/v1",
+                'url': "https://xenon-pmts.uc.r.appspot.com/v1",
                 'description': "No description provided",
             }
         ]

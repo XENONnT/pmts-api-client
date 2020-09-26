@@ -1,12 +1,13 @@
 # xepmts.MuvetoAfterpulseApi
 
-All URIs are relative to *https://api.pmts.xenonnt.org/v1*
+All URIs are relative to *https://xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_muveto_afterpulse_item**](MuvetoAfterpulseApi.md#delete_muveto_afterpulse_item) | **DELETE** /muveto/afterpules/{muvetoafterpulseId} | Deletes a MuvetoAfterpulse document
 [**get_muveto_afterpulse_item**](MuvetoAfterpulseApi.md#get_muveto_afterpulse_item) | **GET** /muveto/afterpules/{muvetoafterpulseId} | Retrieves a MuvetoAfterpulse document
 [**get_muveto_afterpulses**](MuvetoAfterpulseApi.md#get_muveto_afterpulses) | **GET** /muveto/afterpules | Retrieves one or more MuvetoAfterpulses
+[**patch_muveto_afterpulse_item**](MuvetoAfterpulseApi.md#patch_muveto_afterpulse_item) | **PATCH** /muveto/afterpules/{muvetoafterpulseId} | Updates a MuvetoAfterpulse document
 [**post_muveto_afterpulses**](MuvetoAfterpulseApi.md#post_muveto_afterpulses) | **POST** /muveto/afterpules | Stores one or more MuvetoAfterpulses.
 [**put_muveto_afterpulse_item**](MuvetoAfterpulseApi.md#put_muveto_afterpulse_item) | **PUT** /muveto/afterpules/{muvetoafterpulseId} | Replaces a MuvetoAfterpulse document
 
@@ -29,8 +30,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -92,8 +93,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -137,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_afterpulses**
-> InlineResponse20033 get_muveto_afterpulses(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20024 get_muveto_afterpulses(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoAfterpulses
 
@@ -154,8 +155,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -187,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -202,6 +203,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | An array of MuvetoAfterpulses |  -  |
+**0** | An error message |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_muveto_afterpulse_item**
+> patch_muveto_afterpulse_item(muvetoafterpulse_id, muveto_afterpulse, if_match=if_match)
+
+Updates a MuvetoAfterpulse document
+
+### Example
+
+* Bearer Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+configuration = xepmts.Configuration()
+# Configure Bearer authorization: BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+
+# Enter a context with an instance of the API client
+with xepmts.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xepmts.MuvetoAfterpulseApi(api_client)
+    muvetoafterpulse_id = 'muvetoafterpulse_id_example' # str | 
+muveto_afterpulse = xepmts.MuvetoAfterpulse() # MuvetoAfterpulse | A MuvetoAfterpulse or list of MuvetoAfterpulse documents
+if_match = 'if_match_example' # str | Current value of the _etag field (optional)
+
+    try:
+        # Updates a MuvetoAfterpulse document
+        api_instance.patch_muveto_afterpulse_item(muvetoafterpulse_id, muveto_afterpulse, if_match=if_match)
+    except ApiException as e:
+        print("Exception when calling MuvetoAfterpulseApi->patch_muveto_afterpulse_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **muvetoafterpulse_id** | **str**|  | 
+ **muveto_afterpulse** | [**MuvetoAfterpulse**](MuvetoAfterpulse.md)| A MuvetoAfterpulse or list of MuvetoAfterpulse documents | 
+ **if_match** | **str**| Current value of the _etag field | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | MuvetoAfterpulse document updated successfully |  -  |
 **0** | An error message |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -224,8 +290,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -285,8 +351,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

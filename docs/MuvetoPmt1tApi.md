@@ -1,6 +1,6 @@
 # xepmts.MuvetoPmt1tApi
 
-All URIs are relative to *https://api.pmts.xenonnt.org/v1*
+All URIs are relative to *https://xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**get_muveto_pmt1t_item**](MuvetoPmt1tApi.md#get_muveto_pmt1t_item) | **GET** /xenon1t/muveto/pmts/{muvetopmt1tId} | Retrieves a MuvetoPmt1t document
 [**get_muveto_pmt1t_item_by_serial_number**](MuvetoPmt1tApi.md#get_muveto_pmt1t_item_by_serial_number) | **GET** /xenon1t/muveto/pmts/{Serial_Number} | Retrieves a MuvetoPmt1t document by serial_number
 [**get_muveto_pmt1ts**](MuvetoPmt1tApi.md#get_muveto_pmt1ts) | **GET** /xenon1t/muveto/pmts | Retrieves one or more MuvetoPmt1ts
+[**patch_muveto_pmt1t_item**](MuvetoPmt1tApi.md#patch_muveto_pmt1t_item) | **PATCH** /xenon1t/muveto/pmts/{muvetopmt1tId} | Updates a MuvetoPmt1t document
 [**post_muveto_pmt1ts**](MuvetoPmt1tApi.md#post_muveto_pmt1ts) | **POST** /xenon1t/muveto/pmts | Stores one or more MuvetoPmt1ts.
 [**put_muveto_pmt1t_item**](MuvetoPmt1tApi.md#put_muveto_pmt1t_item) | **PUT** /xenon1t/muveto/pmts/{muvetopmt1tId} | Replaces a MuvetoPmt1t document
 
@@ -30,8 +31,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -93,8 +94,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -155,8 +156,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -200,7 +201,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_pmt1ts**
-> InlineResponse20053 get_muveto_pmt1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20054 get_muveto_pmt1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoPmt1ts
 
@@ -217,8 +218,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -250,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20053**](InlineResponse20053.md)
+[**InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -265,6 +266,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | An array of MuvetoPmt1ts |  -  |
+**0** | An error message |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_muveto_pmt1t_item**
+> patch_muveto_pmt1t_item(muvetopmt1t_id, muveto_pmt1t, if_match=if_match)
+
+Updates a MuvetoPmt1t document
+
+### Example
+
+* Bearer Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+configuration = xepmts.Configuration()
+# Configure Bearer authorization: BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+
+# Enter a context with an instance of the API client
+with xepmts.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xepmts.MuvetoPmt1tApi(api_client)
+    muvetopmt1t_id = 'muvetopmt1t_id_example' # str | 
+muveto_pmt1t = xepmts.MuvetoPmt1t() # MuvetoPmt1t | A MuvetoPmt1t or list of MuvetoPmt1t documents
+if_match = 'if_match_example' # str | Current value of the _etag field (optional)
+
+    try:
+        # Updates a MuvetoPmt1t document
+        api_instance.patch_muveto_pmt1t_item(muvetopmt1t_id, muveto_pmt1t, if_match=if_match)
+    except ApiException as e:
+        print("Exception when calling MuvetoPmt1tApi->patch_muveto_pmt1t_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **muvetopmt1t_id** | **str**|  | 
+ **muveto_pmt1t** | [**MuvetoPmt1t**](MuvetoPmt1t.md)| A MuvetoPmt1t or list of MuvetoPmt1t documents | 
+ **if_match** | **str**| Current value of the _etag field | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | MuvetoPmt1t document updated successfully |  -  |
 **0** | An error message |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -287,8 +353,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -348,8 +414,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

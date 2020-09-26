@@ -399,7 +399,7 @@ class NvetoInstallApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: InlineResponse20024
+        :return: InlineResponse20019
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -429,7 +429,7 @@ class NvetoInstallApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(InlineResponse20024, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(InlineResponse20019, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -498,7 +498,137 @@ class NvetoInstallApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20024',  # noqa: E501
+            response_type='InlineResponse20019',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def patch_nveto_install_item(self, nvetoinstall_id, nveto_install, **kwargs):  # noqa: E501
+        """Updates a NvetoInstall document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_nveto_install_item(nvetoinstall_id, nveto_install, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str nvetoinstall_id: (required)
+        :param NvetoInstall nveto_install: A NvetoInstall or list of NvetoInstall documents (required)
+        :param str if_match: Current value of the _etag field
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.patch_nveto_install_item_with_http_info(nvetoinstall_id, nveto_install, **kwargs)  # noqa: E501
+
+    def patch_nveto_install_item_with_http_info(self, nvetoinstall_id, nveto_install, **kwargs):  # noqa: E501
+        """Updates a NvetoInstall document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_nveto_install_item_with_http_info(nvetoinstall_id, nveto_install, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str nvetoinstall_id: (required)
+        :param NvetoInstall nveto_install: A NvetoInstall or list of NvetoInstall documents (required)
+        :param str if_match: Current value of the _etag field
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'nvetoinstall_id',
+            'nveto_install',
+            'if_match'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_nveto_install_item" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'nvetoinstall_id' is set
+        if self.api_client.client_side_validation and ('nvetoinstall_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['nvetoinstall_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `nvetoinstall_id` when calling `patch_nveto_install_item`")  # noqa: E501
+        # verify the required parameter 'nveto_install' is set
+        if self.api_client.client_side_validation and ('nveto_install' not in local_var_params or  # noqa: E501
+                                                        local_var_params['nveto_install'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `nveto_install` when calling `patch_nveto_install_item`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'nvetoinstall_id' in local_var_params:
+            path_params['nvetoinstallId'] = local_var_params['nvetoinstall_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'if_match' in local_var_params:
+            header_params['If-Match'] = local_var_params['if_match']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'nveto_install' in local_var_params:
+            body_params = local_var_params['nveto_install']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['BearerAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/nveto/installs/{nvetoinstallId}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

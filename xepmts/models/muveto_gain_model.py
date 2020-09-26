@@ -37,7 +37,7 @@ class MuvetoGainModel(object):
         'detector': 'str',
         'experiment': 'str',
         'run_id': 'str',
-        'timestamp': 'int',
+        'timestamp': 'str',
         'pmt_index': 'int',
         'gain': 'float',
         'gain_err': 'float',
@@ -49,6 +49,7 @@ class MuvetoGainModel(object):
         'gain_model_err': 'float',
         'adctoe_gain_model': 'float',
         'adctoe_gain_model_err': 'float',
+        'time': 'str',
         'id': 'str'
     }
 
@@ -68,10 +69,11 @@ class MuvetoGainModel(object):
         'gain_model_err': 'gain_model_err',
         'adctoe_gain_model': 'adctoe_gain_model',
         'adctoe_gain_model_err': 'adctoe_gain_model_err',
+        'time': 'time',
         'id': '_id'
     }
 
-    def __init__(self, detector='muveto', experiment='xenonnt', run_id=None, timestamp=None, pmt_index=None, gain=None, gain_err=None, gain_stat_err=None, gain_sys_err=None, voltage=None, gain_model=None, gain_model_stat_err=None, gain_model_err=None, adctoe_gain_model=None, adctoe_gain_model_err=None, id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, detector='muveto', experiment='xenonnt', run_id=None, timestamp=None, pmt_index=None, gain=None, gain_err=None, gain_stat_err=None, gain_sys_err=None, voltage=None, gain_model=None, gain_model_stat_err=None, gain_model_err=None, adctoe_gain_model=None, adctoe_gain_model_err=None, time=None, id=None, local_vars_configuration=None):  # noqa: E501
         """MuvetoGainModel - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -92,6 +94,7 @@ class MuvetoGainModel(object):
         self._gain_model_err = None
         self._adctoe_gain_model = None
         self._adctoe_gain_model_err = None
+        self._time = None
         self._id = None
         self.discriminator = None
 
@@ -107,18 +110,13 @@ class MuvetoGainModel(object):
             self.gain_stat_err = gain_stat_err
         if gain_sys_err is not None:
             self.gain_sys_err = gain_sys_err
-        if voltage is not None:
-            self.voltage = voltage
-        if gain_model is not None:
-            self.gain_model = gain_model
-        if gain_model_stat_err is not None:
-            self.gain_model_stat_err = gain_model_stat_err
-        if gain_model_err is not None:
-            self.gain_model_err = gain_model_err
-        if adctoe_gain_model is not None:
-            self.adctoe_gain_model = adctoe_gain_model
-        if adctoe_gain_model_err is not None:
-            self.adctoe_gain_model_err = adctoe_gain_model_err
+        self.voltage = voltage
+        self.gain_model = gain_model
+        self.gain_model_stat_err = gain_model_stat_err
+        self.gain_model_err = gain_model_err
+        self.adctoe_gain_model = adctoe_gain_model
+        self.adctoe_gain_model_err = adctoe_gain_model_err
+        self.time = time
         if id is not None:
             self.id = id
 
@@ -209,7 +207,7 @@ class MuvetoGainModel(object):
 
 
         :return: The timestamp of this MuvetoGainModel.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._timestamp
 
@@ -219,7 +217,7 @@ class MuvetoGainModel(object):
 
 
         :param timestamp: The timestamp of this MuvetoGainModel.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._timestamp = timestamp
@@ -353,6 +351,8 @@ class MuvetoGainModel(object):
         :param voltage: The voltage of this MuvetoGainModel.  # noqa: E501
         :type: float
         """
+        if self.local_vars_configuration.client_side_validation and voltage is None:  # noqa: E501
+            raise ValueError("Invalid value for `voltage`, must not be `None`")  # noqa: E501
 
         self._voltage = voltage
 
@@ -374,6 +374,8 @@ class MuvetoGainModel(object):
         :param gain_model: The gain_model of this MuvetoGainModel.  # noqa: E501
         :type: float
         """
+        if self.local_vars_configuration.client_side_validation and gain_model is None:  # noqa: E501
+            raise ValueError("Invalid value for `gain_model`, must not be `None`")  # noqa: E501
 
         self._gain_model = gain_model
 
@@ -395,6 +397,8 @@ class MuvetoGainModel(object):
         :param gain_model_stat_err: The gain_model_stat_err of this MuvetoGainModel.  # noqa: E501
         :type: float
         """
+        if self.local_vars_configuration.client_side_validation and gain_model_stat_err is None:  # noqa: E501
+            raise ValueError("Invalid value for `gain_model_stat_err`, must not be `None`")  # noqa: E501
 
         self._gain_model_stat_err = gain_model_stat_err
 
@@ -416,6 +420,8 @@ class MuvetoGainModel(object):
         :param gain_model_err: The gain_model_err of this MuvetoGainModel.  # noqa: E501
         :type: float
         """
+        if self.local_vars_configuration.client_side_validation and gain_model_err is None:  # noqa: E501
+            raise ValueError("Invalid value for `gain_model_err`, must not be `None`")  # noqa: E501
 
         self._gain_model_err = gain_model_err
 
@@ -437,6 +443,8 @@ class MuvetoGainModel(object):
         :param adctoe_gain_model: The adctoe_gain_model of this MuvetoGainModel.  # noqa: E501
         :type: float
         """
+        if self.local_vars_configuration.client_side_validation and adctoe_gain_model is None:  # noqa: E501
+            raise ValueError("Invalid value for `adctoe_gain_model`, must not be `None`")  # noqa: E501
 
         self._adctoe_gain_model = adctoe_gain_model
 
@@ -458,8 +466,33 @@ class MuvetoGainModel(object):
         :param adctoe_gain_model_err: The adctoe_gain_model_err of this MuvetoGainModel.  # noqa: E501
         :type: float
         """
+        if self.local_vars_configuration.client_side_validation and adctoe_gain_model_err is None:  # noqa: E501
+            raise ValueError("Invalid value for `adctoe_gain_model_err`, must not be `None`")  # noqa: E501
 
         self._adctoe_gain_model_err = adctoe_gain_model_err
+
+    @property
+    def time(self):
+        """Gets the time of this MuvetoGainModel.  # noqa: E501
+
+
+        :return: The time of this MuvetoGainModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._time
+
+    @time.setter
+    def time(self, time):
+        """Sets the time of this MuvetoGainModel.
+
+
+        :param time: The time of this MuvetoGainModel.  # noqa: E501
+        :type: str
+        """
+        if self.local_vars_configuration.client_side_validation and time is None:  # noqa: E501
+            raise ValueError("Invalid value for `time`, must not be `None`")  # noqa: E501
+
+        self._time = time
 
     @property
     def id(self):

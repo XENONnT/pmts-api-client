@@ -72,12 +72,7 @@ from xepmts.models.inline_response20053 import InlineResponse20053
 from xepmts.models.inline_response20054 import InlineResponse20054
 from xepmts.models.inline_response20055 import InlineResponse20055
 from xepmts.models.inline_response20056 import InlineResponse20056
-from xepmts.models.inline_response20057 import InlineResponse20057
-from xepmts.models.inline_response20058 import InlineResponse20058
-from xepmts.models.inline_response20059 import InlineResponse20059
 from xepmts.models.inline_response2006 import InlineResponse2006
-from xepmts.models.inline_response20060 import InlineResponse20060
-from xepmts.models.inline_response20061 import InlineResponse20061
 from xepmts.models.inline_response2007 import InlineResponse2007
 from xepmts.models.inline_response2008 import InlineResponse2008
 from xepmts.models.inline_response2009 import InlineResponse2009
@@ -101,8 +96,6 @@ from xepmts.models.muveto_pmt_error import MuvetoPmtError
 from xepmts.models.muveto_pmt_error1t import MuvetoPmtError1t
 from xepmts.models.muveto_voltage_change import MuvetoVoltageChange
 from xepmts.models.muveto_voltage_change1t import MuvetoVoltageChange1t
-from xepmts.models.muveto_voltage_map import MuvetoVoltageMap
-from xepmts.models.muveto_voltage_map1t import MuvetoVoltageMap1t
 from xepmts.models.muveto_voltage_map_name import MuvetoVoltageMapName
 from xepmts.models.muveto_voltage_map_name1t import MuvetoVoltageMapName1t
 from xepmts.models.nveto_afterpulse import NvetoAfterpulse
@@ -115,7 +108,6 @@ from xepmts.models.nveto_install import NvetoInstall
 from xepmts.models.nveto_pmt import NvetoPmt
 from xepmts.models.nveto_pmt_error import NvetoPmtError
 from xepmts.models.nveto_voltage_change import NvetoVoltageChange
-from xepmts.models.nveto_voltage_map import NvetoVoltageMap
 from xepmts.models.nveto_voltage_map_name import NvetoVoltageMapName
 from xepmts.models.respone_links import ResponeLinks
 from xepmts.models.respone_links_parent import ResponeLinksParent
@@ -140,8 +132,5 @@ from xepmts.models.tpc_pmt_error import TpcPmtError
 from xepmts.models.tpc_pmt_error1t import TpcPmtError1t
 from xepmts.models.tpc_voltage_change import TpcVoltageChange
 from xepmts.models.tpc_voltage_change1t import TpcVoltageChange1t
-from xepmts.models.tpc_voltage_map import TpcVoltageMap
-from xepmts.models.tpc_voltage_map1t import TpcVoltageMap1t
 from xepmts.models.tpc_voltage_map_name import TpcVoltageMapName
 from xepmts.models.tpc_voltage_map_name1t import TpcVoltageMapName1t
-from xepmts.models.tpc_voltage_map_voltages import TpcVoltageMapVoltages

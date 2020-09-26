@@ -1,12 +1,13 @@
 # xepmts.NvetoVoltageChangeApi
 
-All URIs are relative to *https://api.pmts.xenonnt.org/v1*
+All URIs are relative to *https://xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_nveto_voltage_change_item**](NvetoVoltageChangeApi.md#delete_nveto_voltage_change_item) | **DELETE** /nveto/voltage_changes/{nvetovoltagechangeId} | Deletes a NvetoVoltageChange document
 [**get_nveto_voltage_change_item**](NvetoVoltageChangeApi.md#get_nveto_voltage_change_item) | **GET** /nveto/voltage_changes/{nvetovoltagechangeId} | Retrieves a NvetoVoltageChange document
 [**get_nveto_voltage_changes**](NvetoVoltageChangeApi.md#get_nveto_voltage_changes) | **GET** /nveto/voltage_changes | Retrieves one or more NvetoVoltageChanges
+[**patch_nveto_voltage_change_item**](NvetoVoltageChangeApi.md#patch_nveto_voltage_change_item) | **PATCH** /nveto/voltage_changes/{nvetovoltagechangeId} | Updates a NvetoVoltageChange document
 [**post_nveto_voltage_changes**](NvetoVoltageChangeApi.md#post_nveto_voltage_changes) | **POST** /nveto/voltage_changes | Stores one or more NvetoVoltageChanges.
 [**put_nveto_voltage_change_item**](NvetoVoltageChangeApi.md#put_nveto_voltage_change_item) | **PUT** /nveto/voltage_changes/{nvetovoltagechangeId} | Replaces a NvetoVoltageChange document
 
@@ -29,8 +30,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -92,8 +93,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -137,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nveto_voltage_changes**
-> InlineResponse20020 get_nveto_voltage_changes(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20022 get_nveto_voltage_changes(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more NvetoVoltageChanges
 
@@ -154,8 +155,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -187,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -202,6 +203,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | An array of NvetoVoltageChanges |  -  |
+**0** | An error message |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_nveto_voltage_change_item**
+> patch_nveto_voltage_change_item(nvetovoltagechange_id, nveto_voltage_change, if_match=if_match)
+
+Updates a NvetoVoltageChange document
+
+### Example
+
+* Bearer Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+configuration = xepmts.Configuration()
+# Configure Bearer authorization: BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+
+# Enter a context with an instance of the API client
+with xepmts.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xepmts.NvetoVoltageChangeApi(api_client)
+    nvetovoltagechange_id = 'nvetovoltagechange_id_example' # str | 
+nveto_voltage_change = xepmts.NvetoVoltageChange() # NvetoVoltageChange | A NvetoVoltageChange or list of NvetoVoltageChange documents
+if_match = 'if_match_example' # str | Current value of the _etag field (optional)
+
+    try:
+        # Updates a NvetoVoltageChange document
+        api_instance.patch_nveto_voltage_change_item(nvetovoltagechange_id, nveto_voltage_change, if_match=if_match)
+    except ApiException as e:
+        print("Exception when calling NvetoVoltageChangeApi->patch_nveto_voltage_change_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nvetovoltagechange_id** | **str**|  | 
+ **nveto_voltage_change** | [**NvetoVoltageChange**](NvetoVoltageChange.md)| A NvetoVoltageChange or list of NvetoVoltageChange documents | 
+ **if_match** | **str**| Current value of the _etag field | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | NvetoVoltageChange document updated successfully |  -  |
 **0** | An error message |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -224,8 +290,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -285,8 +351,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

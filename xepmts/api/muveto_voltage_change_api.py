@@ -287,7 +287,7 @@ class MuvetoVoltageChangeApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: InlineResponse20032
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -317,7 +317,7 @@ class MuvetoVoltageChangeApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(InlineResponse20032, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(InlineResponse20033, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -386,7 +386,137 @@ class MuvetoVoltageChangeApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20032',  # noqa: E501
+            response_type='InlineResponse20033',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def patch_muveto_voltage_change_item(self, muvetovoltagechange_id, muveto_voltage_change, **kwargs):  # noqa: E501
+        """Updates a MuvetoVoltageChange document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_muveto_voltage_change_item(muvetovoltagechange_id, muveto_voltage_change, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str muvetovoltagechange_id: (required)
+        :param MuvetoVoltageChange muveto_voltage_change: A MuvetoVoltageChange or list of MuvetoVoltageChange documents (required)
+        :param str if_match: Current value of the _etag field
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.patch_muveto_voltage_change_item_with_http_info(muvetovoltagechange_id, muveto_voltage_change, **kwargs)  # noqa: E501
+
+    def patch_muveto_voltage_change_item_with_http_info(self, muvetovoltagechange_id, muveto_voltage_change, **kwargs):  # noqa: E501
+        """Updates a MuvetoVoltageChange document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_muveto_voltage_change_item_with_http_info(muvetovoltagechange_id, muveto_voltage_change, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str muvetovoltagechange_id: (required)
+        :param MuvetoVoltageChange muveto_voltage_change: A MuvetoVoltageChange or list of MuvetoVoltageChange documents (required)
+        :param str if_match: Current value of the _etag field
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'muvetovoltagechange_id',
+            'muveto_voltage_change',
+            'if_match'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_muveto_voltage_change_item" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'muvetovoltagechange_id' is set
+        if self.api_client.client_side_validation and ('muvetovoltagechange_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['muvetovoltagechange_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `muvetovoltagechange_id` when calling `patch_muveto_voltage_change_item`")  # noqa: E501
+        # verify the required parameter 'muveto_voltage_change' is set
+        if self.api_client.client_side_validation and ('muveto_voltage_change' not in local_var_params or  # noqa: E501
+                                                        local_var_params['muveto_voltage_change'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `muveto_voltage_change` when calling `patch_muveto_voltage_change_item`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'muvetovoltagechange_id' in local_var_params:
+            path_params['muvetovoltagechangeId'] = local_var_params['muvetovoltagechange_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'if_match' in local_var_params:
+            header_params['If-Match'] = local_var_params['if_match']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'muveto_voltage_change' in local_var_params:
+            body_params = local_var_params['muveto_voltage_change']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['BearerAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/muveto/voltage_changes/{muvetovoltagechangeId}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

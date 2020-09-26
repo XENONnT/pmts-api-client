@@ -1,12 +1,13 @@
 # xepmts.MuvetoGainMeasurement1tApi
 
-All URIs are relative to *https://api.pmts.xenonnt.org/v1*
+All URIs are relative to *https://xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_muveto_gain_measurement1t_item**](MuvetoGainMeasurement1tApi.md#delete_muveto_gain_measurement1t_item) | **DELETE** /xenon1t/muveto/gain_measurements/{muvetogainmeasurement1tId} | Deletes a MuvetoGainMeasurement1t document
 [**get_muveto_gain_measurement1t_item**](MuvetoGainMeasurement1tApi.md#get_muveto_gain_measurement1t_item) | **GET** /xenon1t/muveto/gain_measurements/{muvetogainmeasurement1tId} | Retrieves a MuvetoGainMeasurement1t document
 [**get_muveto_gain_measurement1ts**](MuvetoGainMeasurement1tApi.md#get_muveto_gain_measurement1ts) | **GET** /xenon1t/muveto/gain_measurements | Retrieves one or more MuvetoGainMeasurement1ts
+[**patch_muveto_gain_measurement1t_item**](MuvetoGainMeasurement1tApi.md#patch_muveto_gain_measurement1t_item) | **PATCH** /xenon1t/muveto/gain_measurements/{muvetogainmeasurement1tId} | Updates a MuvetoGainMeasurement1t document
 [**post_muveto_gain_measurement1ts**](MuvetoGainMeasurement1tApi.md#post_muveto_gain_measurement1ts) | **POST** /xenon1t/muveto/gain_measurements | Stores one or more MuvetoGainMeasurement1ts.
 [**put_muveto_gain_measurement1t_item**](MuvetoGainMeasurement1tApi.md#put_muveto_gain_measurement1t_item) | **PUT** /xenon1t/muveto/gain_measurements/{muvetogainmeasurement1tId} | Replaces a MuvetoGainMeasurement1t document
 
@@ -29,8 +30,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -92,8 +93,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -137,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_gain_measurement1ts**
-> InlineResponse20061 get_muveto_gain_measurement1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20049 get_muveto_gain_measurement1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoGainMeasurement1ts
 
@@ -154,8 +155,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -187,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20061**](InlineResponse20061.md)
+[**InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 
@@ -202,6 +203,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | An array of MuvetoGainMeasurement1ts |  -  |
+**0** | An error message |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_muveto_gain_measurement1t_item**
+> patch_muveto_gain_measurement1t_item(muvetogainmeasurement1t_id, muveto_gain_measurement1t, if_match=if_match)
+
+Updates a MuvetoGainMeasurement1t document
+
+### Example
+
+* Bearer Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+configuration = xepmts.Configuration()
+# Configure Bearer authorization: BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+
+# Enter a context with an instance of the API client
+with xepmts.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xepmts.MuvetoGainMeasurement1tApi(api_client)
+    muvetogainmeasurement1t_id = 'muvetogainmeasurement1t_id_example' # str | 
+muveto_gain_measurement1t = xepmts.MuvetoGainMeasurement1t() # MuvetoGainMeasurement1t | A MuvetoGainMeasurement1t or list of MuvetoGainMeasurement1t documents
+if_match = 'if_match_example' # str | Current value of the _etag field (optional)
+
+    try:
+        # Updates a MuvetoGainMeasurement1t document
+        api_instance.patch_muveto_gain_measurement1t_item(muvetogainmeasurement1t_id, muveto_gain_measurement1t, if_match=if_match)
+    except ApiException as e:
+        print("Exception when calling MuvetoGainMeasurement1tApi->patch_muveto_gain_measurement1t_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **muvetogainmeasurement1t_id** | **str**|  | 
+ **muveto_gain_measurement1t** | [**MuvetoGainMeasurement1t**](MuvetoGainMeasurement1t.md)| A MuvetoGainMeasurement1t or list of MuvetoGainMeasurement1t documents | 
+ **if_match** | **str**| Current value of the _etag field | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | MuvetoGainMeasurement1t document updated successfully |  -  |
 **0** | An error message |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -224,8 +290,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -285,8 +351,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

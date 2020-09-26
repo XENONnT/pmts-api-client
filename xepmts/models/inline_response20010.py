@@ -34,7 +34,7 @@ class InlineResponse20010(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[TpcInstall]',
+        'items': 'list[TpcPmt]',
         'meta': 'ResponeMetadata',
         'links': 'ResponeLinks'
     }
@@ -69,7 +69,7 @@ class InlineResponse20010(object):
 
 
         :return: The items of this InlineResponse20010.  # noqa: E501
-        :rtype: list[TpcInstall]
+        :rtype: list[TpcPmt]
         """
         return self._items
 
@@ -79,7 +79,7 @@ class InlineResponse20010(object):
 
 
         :param items: The items of this InlineResponse20010.  # noqa: E501
-        :type: list[TpcInstall]
+        :type: list[TpcPmt]
         """
 
         self._items = items

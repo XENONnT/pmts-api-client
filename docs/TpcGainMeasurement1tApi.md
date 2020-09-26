@@ -1,12 +1,13 @@
 # xepmts.TpcGainMeasurement1tApi
 
-All URIs are relative to *https://api.pmts.xenonnt.org/v1*
+All URIs are relative to *https://xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_tpc_gain_measurement1t_item**](TpcGainMeasurement1tApi.md#delete_tpc_gain_measurement1t_item) | **DELETE** /xenon1t/tpc/gain_measurements/{tpcgainmeasurement1tId} | Deletes a TpcGainMeasurement1t document
 [**get_tpc_gain_measurement1t_item**](TpcGainMeasurement1tApi.md#get_tpc_gain_measurement1t_item) | **GET** /xenon1t/tpc/gain_measurements/{tpcgainmeasurement1tId} | Retrieves a TpcGainMeasurement1t document
 [**get_tpc_gain_measurement1ts**](TpcGainMeasurement1tApi.md#get_tpc_gain_measurement1ts) | **GET** /xenon1t/tpc/gain_measurements | Retrieves one or more TpcGainMeasurement1ts
+[**patch_tpc_gain_measurement1t_item**](TpcGainMeasurement1tApi.md#patch_tpc_gain_measurement1t_item) | **PATCH** /xenon1t/tpc/gain_measurements/{tpcgainmeasurement1tId} | Updates a TpcGainMeasurement1t document
 [**post_tpc_gain_measurement1ts**](TpcGainMeasurement1tApi.md#post_tpc_gain_measurement1ts) | **POST** /xenon1t/tpc/gain_measurements | Stores one or more TpcGainMeasurement1ts.
 [**put_tpc_gain_measurement1t_item**](TpcGainMeasurement1tApi.md#put_tpc_gain_measurement1t_item) | **PUT** /xenon1t/tpc/gain_measurements/{tpcgainmeasurement1tId} | Replaces a TpcGainMeasurement1t document
 
@@ -29,8 +30,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -92,8 +93,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -137,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_gain_measurement1ts**
-> InlineResponse20049 get_tpc_gain_measurement1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20038 get_tpc_gain_measurement1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcGainMeasurement1ts
 
@@ -154,8 +155,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -187,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -202,6 +203,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | An array of TpcGainMeasurement1ts |  -  |
+**0** | An error message |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_tpc_gain_measurement1t_item**
+> patch_tpc_gain_measurement1t_item(tpcgainmeasurement1t_id, tpc_gain_measurement1t, if_match=if_match)
+
+Updates a TpcGainMeasurement1t document
+
+### Example
+
+* Bearer Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+configuration = xepmts.Configuration()
+# Configure Bearer authorization: BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+
+# Enter a context with an instance of the API client
+with xepmts.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xepmts.TpcGainMeasurement1tApi(api_client)
+    tpcgainmeasurement1t_id = 'tpcgainmeasurement1t_id_example' # str | 
+tpc_gain_measurement1t = xepmts.TpcGainMeasurement1t() # TpcGainMeasurement1t | A TpcGainMeasurement1t or list of TpcGainMeasurement1t documents
+if_match = 'if_match_example' # str | Current value of the _etag field (optional)
+
+    try:
+        # Updates a TpcGainMeasurement1t document
+        api_instance.patch_tpc_gain_measurement1t_item(tpcgainmeasurement1t_id, tpc_gain_measurement1t, if_match=if_match)
+    except ApiException as e:
+        print("Exception when calling TpcGainMeasurement1tApi->patch_tpc_gain_measurement1t_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tpcgainmeasurement1t_id** | **str**|  | 
+ **tpc_gain_measurement1t** | [**TpcGainMeasurement1t**](TpcGainMeasurement1t.md)| A TpcGainMeasurement1t or list of TpcGainMeasurement1t documents | 
+ **if_match** | **str**| Current value of the _etag field | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | TpcGainMeasurement1t document updated successfully |  -  |
 **0** | An error message |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -224,8 +290,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -285,8 +351,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

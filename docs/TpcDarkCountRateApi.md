@@ -1,12 +1,13 @@
 # xepmts.TpcDarkCountRateApi
 
-All URIs are relative to *https://api.pmts.xenonnt.org/v1*
+All URIs are relative to *https://xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_tpc_dark_count_rate_item**](TpcDarkCountRateApi.md#delete_tpc_dark_count_rate_item) | **DELETE** /tpc/dark_counts_rates/{tpcdarkcountrateId} | Deletes a TpcDarkCountRate document
 [**get_tpc_dark_count_rate_item**](TpcDarkCountRateApi.md#get_tpc_dark_count_rate_item) | **GET** /tpc/dark_counts_rates/{tpcdarkcountrateId} | Retrieves a TpcDarkCountRate document
 [**get_tpc_dark_count_rates**](TpcDarkCountRateApi.md#get_tpc_dark_count_rates) | **GET** /tpc/dark_counts_rates | Retrieves one or more TpcDarkCountRates
+[**patch_tpc_dark_count_rate_item**](TpcDarkCountRateApi.md#patch_tpc_dark_count_rate_item) | **PATCH** /tpc/dark_counts_rates/{tpcdarkcountrateId} | Updates a TpcDarkCountRate document
 [**post_tpc_dark_count_rates**](TpcDarkCountRateApi.md#post_tpc_dark_count_rates) | **POST** /tpc/dark_counts_rates | Stores one or more TpcDarkCountRates.
 [**put_tpc_dark_count_rate_item**](TpcDarkCountRateApi.md#put_tpc_dark_count_rate_item) | **PUT** /tpc/dark_counts_rates/{tpcdarkcountrateId} | Replaces a TpcDarkCountRate document
 
@@ -29,8 +30,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -92,8 +93,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -137,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_dark_count_rates**
-> InlineResponse200 get_tpc_dark_count_rates(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse2003 get_tpc_dark_count_rates(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcDarkCountRates
 
@@ -154,8 +155,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -187,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -202,6 +203,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | An array of TpcDarkCountRates |  -  |
+**0** | An error message |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_tpc_dark_count_rate_item**
+> patch_tpc_dark_count_rate_item(tpcdarkcountrate_id, tpc_dark_count_rate, if_match=if_match)
+
+Updates a TpcDarkCountRate document
+
+### Example
+
+* Bearer Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+configuration = xepmts.Configuration()
+# Configure Bearer authorization: BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+
+# Enter a context with an instance of the API client
+with xepmts.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xepmts.TpcDarkCountRateApi(api_client)
+    tpcdarkcountrate_id = 'tpcdarkcountrate_id_example' # str | 
+tpc_dark_count_rate = xepmts.TpcDarkCountRate() # TpcDarkCountRate | A TpcDarkCountRate or list of TpcDarkCountRate documents
+if_match = 'if_match_example' # str | Current value of the _etag field (optional)
+
+    try:
+        # Updates a TpcDarkCountRate document
+        api_instance.patch_tpc_dark_count_rate_item(tpcdarkcountrate_id, tpc_dark_count_rate, if_match=if_match)
+    except ApiException as e:
+        print("Exception when calling TpcDarkCountRateApi->patch_tpc_dark_count_rate_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tpcdarkcountrate_id** | **str**|  | 
+ **tpc_dark_count_rate** | [**TpcDarkCountRate**](TpcDarkCountRate.md)| A TpcDarkCountRate or list of TpcDarkCountRate documents | 
+ **if_match** | **str**| Current value of the _etag field | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | TpcDarkCountRate document updated successfully |  -  |
 **0** | An error message |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -224,8 +290,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -285,8 +351,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

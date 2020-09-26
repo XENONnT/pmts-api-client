@@ -287,7 +287,7 @@ class TpcGainMeasurementApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: InlineResponse20013
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -317,7 +317,7 @@ class TpcGainMeasurementApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(InlineResponse20013, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(InlineResponse2004, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -386,7 +386,137 @@ class TpcGainMeasurementApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20013',  # noqa: E501
+            response_type='InlineResponse2004',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def patch_tpc_gain_measurement_item(self, tpcgainmeasurement_id, tpc_gain_measurement, **kwargs):  # noqa: E501
+        """Updates a TpcGainMeasurement document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_tpc_gain_measurement_item(tpcgainmeasurement_id, tpc_gain_measurement, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str tpcgainmeasurement_id: (required)
+        :param TpcGainMeasurement tpc_gain_measurement: A TpcGainMeasurement or list of TpcGainMeasurement documents (required)
+        :param str if_match: Current value of the _etag field
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.patch_tpc_gain_measurement_item_with_http_info(tpcgainmeasurement_id, tpc_gain_measurement, **kwargs)  # noqa: E501
+
+    def patch_tpc_gain_measurement_item_with_http_info(self, tpcgainmeasurement_id, tpc_gain_measurement, **kwargs):  # noqa: E501
+        """Updates a TpcGainMeasurement document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_tpc_gain_measurement_item_with_http_info(tpcgainmeasurement_id, tpc_gain_measurement, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str tpcgainmeasurement_id: (required)
+        :param TpcGainMeasurement tpc_gain_measurement: A TpcGainMeasurement or list of TpcGainMeasurement documents (required)
+        :param str if_match: Current value of the _etag field
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'tpcgainmeasurement_id',
+            'tpc_gain_measurement',
+            'if_match'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_tpc_gain_measurement_item" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'tpcgainmeasurement_id' is set
+        if self.api_client.client_side_validation and ('tpcgainmeasurement_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['tpcgainmeasurement_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `tpcgainmeasurement_id` when calling `patch_tpc_gain_measurement_item`")  # noqa: E501
+        # verify the required parameter 'tpc_gain_measurement' is set
+        if self.api_client.client_side_validation and ('tpc_gain_measurement' not in local_var_params or  # noqa: E501
+                                                        local_var_params['tpc_gain_measurement'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `tpc_gain_measurement` when calling `patch_tpc_gain_measurement_item`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'tpcgainmeasurement_id' in local_var_params:
+            path_params['tpcgainmeasurementId'] = local_var_params['tpcgainmeasurement_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'if_match' in local_var_params:
+            header_params['If-Match'] = local_var_params['if_match']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'tpc_gain_measurement' in local_var_params:
+            body_params = local_var_params['tpc_gain_measurement']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['BearerAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/tpc/gain_measurements/{tpcgainmeasurementId}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

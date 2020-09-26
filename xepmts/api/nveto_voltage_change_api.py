@@ -287,7 +287,7 @@ class NvetoVoltageChangeApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: InlineResponse20020
+        :return: InlineResponse20022
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -317,7 +317,7 @@ class NvetoVoltageChangeApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(InlineResponse20020, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(InlineResponse20022, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -386,7 +386,137 @@ class NvetoVoltageChangeApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20020',  # noqa: E501
+            response_type='InlineResponse20022',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def patch_nveto_voltage_change_item(self, nvetovoltagechange_id, nveto_voltage_change, **kwargs):  # noqa: E501
+        """Updates a NvetoVoltageChange document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_nveto_voltage_change_item(nvetovoltagechange_id, nveto_voltage_change, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str nvetovoltagechange_id: (required)
+        :param NvetoVoltageChange nveto_voltage_change: A NvetoVoltageChange or list of NvetoVoltageChange documents (required)
+        :param str if_match: Current value of the _etag field
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.patch_nveto_voltage_change_item_with_http_info(nvetovoltagechange_id, nveto_voltage_change, **kwargs)  # noqa: E501
+
+    def patch_nveto_voltage_change_item_with_http_info(self, nvetovoltagechange_id, nveto_voltage_change, **kwargs):  # noqa: E501
+        """Updates a NvetoVoltageChange document  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_nveto_voltage_change_item_with_http_info(nvetovoltagechange_id, nveto_voltage_change, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str nvetovoltagechange_id: (required)
+        :param NvetoVoltageChange nveto_voltage_change: A NvetoVoltageChange or list of NvetoVoltageChange documents (required)
+        :param str if_match: Current value of the _etag field
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'nvetovoltagechange_id',
+            'nveto_voltage_change',
+            'if_match'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_nveto_voltage_change_item" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'nvetovoltagechange_id' is set
+        if self.api_client.client_side_validation and ('nvetovoltagechange_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['nvetovoltagechange_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `nvetovoltagechange_id` when calling `patch_nveto_voltage_change_item`")  # noqa: E501
+        # verify the required parameter 'nveto_voltage_change' is set
+        if self.api_client.client_side_validation and ('nveto_voltage_change' not in local_var_params or  # noqa: E501
+                                                        local_var_params['nveto_voltage_change'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `nveto_voltage_change` when calling `patch_nveto_voltage_change_item`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'nvetovoltagechange_id' in local_var_params:
+            path_params['nvetovoltagechangeId'] = local_var_params['nvetovoltagechange_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+        if 'if_match' in local_var_params:
+            header_params['If-Match'] = local_var_params['if_match']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'nveto_voltage_change' in local_var_params:
+            body_params = local_var_params['nveto_voltage_change']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['BearerAuth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/nveto/voltage_changes/{nvetovoltagechangeId}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

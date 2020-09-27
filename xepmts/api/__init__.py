@@ -25,6 +25,8 @@ from xepmts.api.muveto_pmt_error_api import MuvetoPmtErrorApi
 from xepmts.api.muveto_pmt_error1t_api import MuvetoPmtError1tApi
 from xepmts.api.muveto_voltage_change_api import MuvetoVoltageChangeApi
 from xepmts.api.muveto_voltage_change1t_api import MuvetoVoltageChange1tApi
+from xepmts.api.muveto_voltage_map_api import MuvetoVoltageMapApi
+from xepmts.api.muveto_voltage_map1t_api import MuvetoVoltageMap1tApi
 from xepmts.api.muveto_voltage_map_name_api import MuvetoVoltageMapNameApi
 from xepmts.api.muveto_voltage_map_name1t_api import MuvetoVoltageMapName1tApi
 from xepmts.api.nveto_afterpulse_api import NvetoAfterpulseApi
@@ -37,6 +39,7 @@ from xepmts.api.nveto_install_api import NvetoInstallApi
 from xepmts.api.nveto_pmt_api import NvetoPmtApi
 from xepmts.api.nveto_pmt_error_api import NvetoPmtErrorApi
 from xepmts.api.nveto_voltage_change_api import NvetoVoltageChangeApi
+from xepmts.api.nveto_voltage_map_api import NvetoVoltageMapApi
 from xepmts.api.nveto_voltage_map_name_api import NvetoVoltageMapNameApi
 from xepmts.api.tpc_afterpulse_api import TpcAfterpulseApi
 from xepmts.api.tpc_afterpulse1t_api import TpcAfterpulse1tApi
@@ -58,5 +61,7 @@ from xepmts.api.tpc_pmt_error_api import TpcPmtErrorApi
 from xepmts.api.tpc_pmt_error1t_api import TpcPmtError1tApi
 from xepmts.api.tpc_voltage_change_api import TpcVoltageChangeApi
 from xepmts.api.tpc_voltage_change1t_api import TpcVoltageChange1tApi
+from xepmts.api.tpc_voltage_map_api import TpcVoltageMapApi
+from xepmts.api.tpc_voltage_map1t_api import TpcVoltageMap1tApi
 from xepmts.api.tpc_voltage_map_name_api import TpcVoltageMapNameApi
 from xepmts.api.tpc_voltage_map_name1t_api import TpcVoltageMapName1tApi

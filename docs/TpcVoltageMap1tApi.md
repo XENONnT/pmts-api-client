@@ -1,6 +1,6 @@
 # xepmts.TpcVoltageMap1tApi
 
-All URIs are relative to *https://api.pmts.xenonnt.org/v1*
+All URIs are relative to *https://api-dot-xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_tpc_voltage_map1t_item**](TpcVoltageMap1tApi.md#get_tpc_voltage_map1t_item) | **GET** /xenon1t/tpc/voltage_maps/{tpcvoltagemap1tId} | Retrieves a TpcVoltageMap1t document
 [**get_tpc_voltage_map1t_item_by_name**](TpcVoltageMap1tApi.md#get_tpc_voltage_map1t_item_by_name) | **GET** /xenon1t/tpc/voltage_maps/{Name} | Retrieves a TpcVoltageMap1t document by name
 [**get_tpc_voltage_map1ts**](TpcVoltageMap1tApi.md#get_tpc_voltage_map1ts) | **GET** /xenon1t/tpc/voltage_maps | Retrieves one or more TpcVoltageMap1ts
+[**patch_tpc_voltage_map1t_item**](TpcVoltageMap1tApi.md#patch_tpc_voltage_map1t_item) | **PATCH** /xenon1t/tpc/voltage_maps/{tpcvoltagemap1tId} | Updates a TpcVoltageMap1t document
 [**post_tpc_voltage_map1ts**](TpcVoltageMap1tApi.md#post_tpc_voltage_map1ts) | **POST** /xenon1t/tpc/voltage_maps | Stores one or more TpcVoltageMap1ts.
 [**put_tpc_voltage_map1t_item**](TpcVoltageMap1tApi.md#put_tpc_voltage_map1t_item) | **PUT** /xenon1t/tpc/voltage_maps/{tpcvoltagemap1tId} | Replaces a TpcVoltageMap1t document
 
@@ -31,8 +32,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -94,8 +95,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -151,8 +152,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -213,8 +214,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -258,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tpc_voltage_map1ts**
-> InlineResponse20046 get_tpc_voltage_map1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20048 get_tpc_voltage_map1ts(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more TpcVoltageMap1ts
 
@@ -275,8 +276,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -308,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20046**](InlineResponse20046.md)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -323,6 +324,71 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | An array of TpcVoltageMap1ts |  -  |
+**0** | An error message |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_tpc_voltage_map1t_item**
+> patch_tpc_voltage_map1t_item(tpcvoltagemap1t_id, tpc_voltage_map1t, if_match=if_match)
+
+Updates a TpcVoltageMap1t document
+
+### Example
+
+* Bearer Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import xepmts
+from xepmts.rest import ApiException
+from pprint import pprint
+configuration = xepmts.Configuration()
+# Configure Bearer authorization: BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
+
+# Enter a context with an instance of the API client
+with xepmts.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = xepmts.TpcVoltageMap1tApi(api_client)
+    tpcvoltagemap1t_id = 'tpcvoltagemap1t_id_example' # str | 
+tpc_voltage_map1t = xepmts.TpcVoltageMap1t() # TpcVoltageMap1t | A TpcVoltageMap1t or list of TpcVoltageMap1t documents
+if_match = 'if_match_example' # str | Current value of the _etag field (optional)
+
+    try:
+        # Updates a TpcVoltageMap1t document
+        api_instance.patch_tpc_voltage_map1t_item(tpcvoltagemap1t_id, tpc_voltage_map1t, if_match=if_match)
+    except ApiException as e:
+        print("Exception when calling TpcVoltageMap1tApi->patch_tpc_voltage_map1t_item: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tpcvoltagemap1t_id** | **str**|  | 
+ **tpc_voltage_map1t** | [**TpcVoltageMap1t**](TpcVoltageMap1t.md)| A TpcVoltageMap1t or list of TpcVoltageMap1t documents | 
+ **if_match** | **str**| Current value of the _etag field | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | TpcVoltageMap1t document updated successfully |  -  |
 **0** | An error message |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -345,8 +411,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -406,8 +472,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.pmts.xenonnt.org/v1
-configuration.host = "https://api.pmts.xenonnt.org/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

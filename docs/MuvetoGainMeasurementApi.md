@@ -1,6 +1,6 @@
 # xepmts.MuvetoGainMeasurementApi
 
-All URIs are relative to *https://xenon-pmts.uc.r.appspot.com/v1*
+All URIs are relative to *https://api-dot-xenon-pmts.uc.r.appspot.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,8 +30,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
-configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -93,8 +93,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
-configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_muveto_gain_measurements**
-> InlineResponse20027 get_muveto_gain_measurements(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
+> InlineResponse20029 get_muveto_gain_measurements(where=where, projection=projection, sort=sort, page=page, max_results=max_results)
 
 Retrieves one or more MuvetoGainMeasurements
 
@@ -155,8 +155,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
-configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -225,8 +225,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
-configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -290,8 +290,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
-configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:
@@ -351,8 +351,8 @@ configuration = xepmts.Configuration()
 # Configure Bearer authorization: BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://xenon-pmts.uc.r.appspot.com/v1
-configuration.host = "https://xenon-pmts.uc.r.appspot.com/v1"
+# Defining host is optional and default to https://api-dot-xenon-pmts.uc.r.appspot.com/v1
+configuration.host = "https://api-dot-xenon-pmts.uc.r.appspot.com/v1"
 
 # Enter a context with an instance of the API client
 with xepmts.ApiClient(configuration) as api_client:

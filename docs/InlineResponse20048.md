@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[MuvetoDarkCountRate1t]**](MuvetoDarkCountRate1t.md) |  | [optional] 
+**items** | [**list[TpcVoltageMap1t]**](TpcVoltageMap1t.md) |  | [optional] 
 **meta** | [**ResponeMetadata**](ResponeMetadata.md) |  | [optional] 
 **links** | [**ResponeLinks**](ResponeLinks.md) |  | [optional] 
 

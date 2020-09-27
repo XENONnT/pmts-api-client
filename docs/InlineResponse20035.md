@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[TpcAfterpulse1t]**](TpcAfterpulse1t.md) |  | [optional] 
+**items** | [**list[MuvetoVoltageChange]**](MuvetoVoltageChange.md) |  | [optional] 
 **meta** | [**ResponeMetadata**](ResponeMetadata.md) |  | [optional] 
 **links** | [**ResponeLinks**](ResponeLinks.md) |  | [optional] 
 

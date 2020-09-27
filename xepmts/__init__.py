@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.3"
+__version__ = "0.3.1"
 
 # import apis into sdk package
 from xepmts.api.account_api import AccountApi
